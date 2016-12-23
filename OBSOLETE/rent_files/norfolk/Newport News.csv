@@ -1,0 +1,5 @@
+date,rent_1_median,rent_1_count,rent_2_median,rent_2_count,rent_3_median,rent_3_count,rent_4_median,rent_4_count,rent_5_median,rent_5_count,rent_6_median,rent_6_count
+'2016-12-15',928,43,845,106,875,75,1797,12,2250,1,0,0
+'2016-12-16',968,57,899,147,850,73,1200,7,0,0,0,0
+'2016-12-17',968,60,825,130,971,78,1597,14,1900,2,1800,1
+'2016-12-19',968,20,874,18,950,20,1445,1,0,0,0,0

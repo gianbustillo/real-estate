@@ -1,0 +1,4 @@
+1. separate code for pulling rent versus home prices, and writing to csv files.
+    code to run for real estate to run once a week
+    searching for sale houses, listed below average prices (need to add column for overall city you dont do search)
+2. fix log file text in log messages appearing as %variable.. change

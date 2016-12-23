@@ -1,0 +1,5 @@
+2016-12-23 03:00:46,051 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "home_estately.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
