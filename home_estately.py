@@ -68,15 +68,17 @@ try:
         zipcode = cities_states[line][column+4]
         RentStatusLastRun = cities_states[line][column+5]
         RentDateLastRun = cities_states[line][column+6]
+        HomeStatusLastRun = cities_states[line][column+7]
         today_file = cities_states[line][column+8]
         today_file = str(today_file.replace("'",""))
-        print today_file
+        #print today_file
         today_file_format = datetime.datetime.strptime(today_file, '%Y-%m-%d').date()
         today_minus_7 = datetime.date.today() - timedelta(days=7)
-        print today_file_format
-        print today_minus_7
+        #print today_file_format
+        #print today_minus_7
         ##if there is today's date already on cities.csv, skip it and go to the next city
-        if today_file_format > today_minus_7:
+        
+        if today_file_format > today_minus_7 and HomeStatusLastRun == 'Successful':
             print str(zipcode) + " " + str(neigh) + " " + str(city) + " already completed for the week"
             continue
 
