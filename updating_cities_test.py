@@ -7,9 +7,14 @@ import time
 import numpy as np
 import csv
 import logging
+##SET PARAMETERS##
+minimum = 0
+
+
+
 
 #minimum number count
-minimum = 0
+
 overall_filename = 'cities_list2.csv'
 
 craigs_url = line = column = 0
@@ -58,8 +63,8 @@ while craigs_url != '':
 
         one_bed_rent_list, two_bed_rent_list, three_bed_rent_list, four_bed_rent_list, five_bed_rent_list, six_bed_rent_list = [],[],[],[],[],[]
         one_bed_home_list, two_bed_home_list, three_bed_home_list, four_bed_home_list, five_bed_home_list, six_bed_home_list = [],[],[],[],[],[]
-        one_bed_home_list_condo, two_bed_home_list_condo, three_bed_home_list_condo, four_bed_home_list_condo, five_bed_home_list_condo, six_bed_home_list_condo = [],[],[],[],[],[]
-        one_bed_home_list_house, two_bed_home_list_house, three_bed_home_list_house, four_bed_home_list_house, five_bed_home_list_house, six_bed_home_list_house = [],[],[],[],[],[]
+        one_bed_home_list_c, two_bed_home_list_c, three_bed_home_list_c, four_bed_home_list_c, five_bed_home_list_c, six_bed_home_list_c = [],[],[],[],[],[]
+        one_bed_home_list_h, two_bed_home_list_h, three_bed_home_list_h, four_bed_home_list_h, five_bed_home_list_h, six_bed_home_list_h = [],[],[],[],[],[]
         one_bed_home_list_th, two_bed_home_list_th, three_bed_home_list_th, four_bed_home_list_th, five_bed_home_list_th, six_bed_home_list_th = [],[],[],[],[],[]
 
 
@@ -111,30 +116,30 @@ while craigs_url != '':
                     six_bed_home_list.append(int(group_home[line_neigh_city_home][column_home+41]))
 
                 if int(group_home[line_neigh_city_home][column_home+49]) >= int(minimum):
-                    one_bed_home_list_condo.append(int(group_home[line_neigh_city_home][column_home+48]))
+                    one_bed_home_list_c.append(int(group_home[line_neigh_city_home][column_home+48]))
                 if int(group_home[line_neigh_city_home][column_home+56]) >= int(minimum):
-                    two_bed_home_list_condo.append(int(group_home[line_neigh_city_home][column_home+55]))
+                    two_bed_home_list_c.append(int(group_home[line_neigh_city_home][column_home+55]))
                 if int(group_home[line_neigh_city_home][column_home+63]) >= int(minimum):
-                    three_bed_home_list_condo.append(int(group_home[line_neigh_city_home][column_home+62]))
+                    three_bed_home_list_c.append(int(group_home[line_neigh_city_home][column_home+62]))
                 if int(group_home[line_neigh_city_home][column_home+70]) >= int(minimum):
-                    four_bed_home_list_condo.append(int(group_home[line_neigh_city_home][column_home+69]))
+                    four_bed_home_list_c.append(int(group_home[line_neigh_city_home][column_home+69]))
                 if int(group_home[line_neigh_city_home][column_home+77]) >= int(minimum):
-                    five_bed_home_list_condo.append(int(group_home[line_neigh_city_home][column_home+76]))
+                    five_bed_home_list_c.append(int(group_home[line_neigh_city_home][column_home+76]))
                 if int(group_home[line_neigh_city_home][column_home+84]) >= int(minimum):
-                    six_bed_home_list_condo.append(int(group_home[line_neigh_city_home][column_home+83]))
+                    six_bed_home_list_c.append(int(group_home[line_neigh_city_home][column_home+83]))
 
                 if int(group_home[line_neigh_city_home][column_home+91]) >= int(minimum):
-                    one_bed_home_list_house.append(int(group_home[line_neigh_city_home][column_home+90]))
+                    one_bed_home_list_h.append(int(group_home[line_neigh_city_home][column_home+90]))
                 if int(group_home[line_neigh_city_home][column_home+98]) >= int(minimum):
-                    two_bed_home_list_house.append(int(group_home[line_neigh_city_home][column_home+97]))
+                    two_bed_home_list_h.append(int(group_home[line_neigh_city_home][column_home+97]))
                 if int(group_home[line_neigh_city_home][column_home+105]) >= int(minimum):
-                    three_bed_home_list_house.append(int(group_home[line_neigh_city_home][column_home+104]))
+                    three_bed_home_list_h.append(int(group_home[line_neigh_city_home][column_home+104]))
                 if int(group_home[line_neigh_city_home][column_home+112]) >= int(minimum):
-                    four_bed_home_list_house.append(int(group_home[line_neigh_city_home][column_home+111]))
+                    four_bed_home_list_h.append(int(group_home[line_neigh_city_home][column_home+111]))
                 if int(group_home[line_neigh_city_home][column_home+119]) >= int(minimum):
-                    five_bed_home_list_house.append(int(group_home[line_neigh_city_home][column_home+118]))
+                    five_bed_home_list_h.append(int(group_home[line_neigh_city_home][column_home+118]))
                 if int(group_home[line_neigh_city_home][column_home+126]) >= int(minimum):
-                    six_bed_home_list_house.append(int(group_home[line_neigh_city_home][column_home+125]))
+                    six_bed_home_list_h.append(int(group_home[line_neigh_city_home][column_home+125]))
 
                 if int(group_home[line_neigh_city_home][column_home+133]) >= int(minimum):
                     one_bed_home_list_th.append(int(group_home[line_neigh_city_home][column_home+132]))
@@ -204,55 +209,55 @@ while craigs_url != '':
             home_6_median = 0
 
 
-        if one_bed_home_list_condo != []:
-            home_1_median_condo = float(np.median(one_bed_home_list_condo))
+        if one_bed_home_list_c != []:
+            home_1_median_c = float(np.median(one_bed_home_list_c))
         else:
-            home_1_median_condo = 0
-        if two_bed_home_list_condo != []:
-            home_2_median_condo = float(np.median(two_bed_home_list_condo))
+            home_1_median_c = 0
+        if two_bed_home_list_c != []:
+            home_2_median_c = float(np.median(two_bed_home_list_c))
         else:
-            home_2_median_condo = 0
-        if three_bed_home_list_condo != []:
-            home_3_median_condo = float(np.median(three_bed_home_list_condo))
+            home_2_median_c = 0
+        if three_bed_home_list_c != []:
+            home_3_median_c = float(np.median(three_bed_home_list_c))
         else:
-            home_3_median_condo = 0
-        if four_bed_home_list_condo != []:
-            home_4_median_condo = float(np.median(four_bed_home_list_condo))
+            home_3_median_c = 0
+        if four_bed_home_list_c != []:
+            home_4_median_c = float(np.median(four_bed_home_list_c))
         else:
-            home_4_median_condo = 0
-        if five_bed_home_list_condo != []:
-            home_5_median_condo = float(np.median(five_bed_home_list_condo))
+            home_4_median_c = 0
+        if five_bed_home_list_c != []:
+            home_5_median_c = float(np.median(five_bed_home_list_c))
         else:
-            home_5_median_condo = 0
-        if six_bed_home_list_condo != []:
-            home_6_median_condo = float(np.median(six_bed_home_list_condo))
+            home_5_median_c = 0
+        if six_bed_home_list_c != []:
+            home_6_median_c = float(np.median(six_bed_home_list_c))
         else:
-            home_6_median_condo = 0
+            home_6_median_c = 0
 
-        if one_bed_home_list_house != []:
-            home_1_median_house = float(np.median(one_bed_home_list_house))
+        if one_bed_home_list_h != []:
+            home_1_median_h = float(np.median(one_bed_home_list_h))
         else:
-            home_1_median_house = 0
-        if two_bed_home_list_house != []:
-            home_2_median_house = float(np.median(two_bed_home_list_house))
+            home_1_median_h = 0
+        if two_bed_home_list_h != []:
+            home_2_median_h = float(np.median(two_bed_home_list_h))
         else:
-            home_2_median_house = 0
-        if three_bed_home_list_house != []:
-            home_3_median_house = float(np.median(three_bed_home_list_house))
+            home_2_median_h = 0
+        if three_bed_home_list_h != []:
+            home_3_median_h = float(np.median(three_bed_home_list_h))
         else:
-            home_3_median_house = 0
-        if four_bed_home_list_house != []:
-            home_4_median_house = float(np.median(four_bed_home_list_house))
+            home_3_median_h = 0
+        if four_bed_home_list_h != []:
+            home_4_median_h = float(np.median(four_bed_home_list_h))
         else:
-            home_4_median_house = 0
-        if five_bed_home_list_house != []:
-            home_5_median_house = float(np.median(five_bed_home_list_house))
+            home_4_median_h = 0
+        if five_bed_home_list_h != []:
+            home_5_median_h = float(np.median(five_bed_home_list_h))
         else:
-            home_5_median_house = 0
-        if six_bed_home_list_house != []:
-            home_6_median_house = float(np.median(six_bed_home_list_house))
+            home_5_median_h = 0
+        if six_bed_home_list_h != []:
+            home_6_median_h = float(np.median(six_bed_home_list_h))
         else:
-            home_6_median_house = 0
+            home_6_median_h = 0
 
 
         if one_bed_home_list_th != []:
@@ -279,7 +284,7 @@ while craigs_url != '':
             home_6_median_th = float(np.median(six_bed_home_list_th))
         else:
             home_6_median_th = 0
-
+        '''
         print str(rent_1_median) + ' rent_1_median'
         print str(rent_2_median) + ' rent_2_median'
         print str(rent_3_median) + ' rent_3_median'
@@ -294,19 +299,19 @@ while craigs_url != '':
         print str(home_5_median) + ' home_5_median'
         print str(home_6_median) + ' home_6_median'
 
-        print str(home_1_median_condo) + ' home_1_median_condo'
-        print str(home_2_median_condo) + ' home_2_median_condo'
-        print str(home_3_median_condo) + ' home_3_median_condo'
-        print str(home_4_median_condo) + ' home_4_median_condo'
-        print str(home_5_median_condo) + ' home_5_median_condo'
-        print str(home_6_median_condo) + ' home_6_median_condo'
+        print str(home_1_median_c) + ' home_1_median_c'
+        print str(home_2_median_c) + ' home_2_median_c'
+        print str(home_3_median_c) + ' home_3_median_c'
+        print str(home_4_median_c) + ' home_4_median_c'
+        print str(home_5_median_c) + ' home_5_median_c'
+        print str(home_6_median_c) + ' home_6_median_c'
 
-        print str(home_1_median_house) + ' home_1_median_house'
-        print str(home_2_median_house) + ' home_2_median_house'
-        print str(home_3_median_house) + ' home_3_median_house'
-        print str(home_4_median_house) + ' home_4_median_house'
-        print str(home_5_median_house) + ' home_5_median_house'
-        print str(home_6_median_house) + ' home_6_median_house'
+        print str(home_1_median_h) + ' home_1_median_h'
+        print str(home_2_median_h) + ' home_2_median_h'
+        print str(home_3_median_h) + ' home_3_median_h'
+        print str(home_4_median_h) + ' home_4_median_h'
+        print str(home_5_median_h) + ' home_5_median_h'
+        print str(home_6_median_h) + ' home_6_median_h'
 
         print str(home_1_median_th) + ' home_1_median_th'
         print str(home_2_median_th) + ' home_2_median_th'
@@ -314,9 +319,52 @@ while craigs_url != '':
         print str(home_4_median_th) + ' home_4_median_th'
         print str(home_5_median_th) + ' home_5_median_th'
         print str(home_6_median_th) + ' home_6_median_th'
+        '''
+        diff_1_bed = rat_1_bed = diff_1_bed_c = rat_1_bed_c = diff_1_bed_h = rat_1_bed_h = diff_1_bed_th = rat_1_bed_th = 0
 
         '''
+        if rent_1_median != 0 and home_1_median != 0:
+            diff_1_bed = rent_1_median - home_1_median
+            rat_1_bed = float("{0:.3f}".format(home_1_median / rent_1_median))
+        else:
+            diff_1_bed = 0
+            rat_1_bed = 0
+        '''
+        print rent_1_median
+        print home_1_median
 
+
+        def home_rent_diff(rent_median,home_median):
+            if rent_median != 0 and home_median != 0:
+                return int(rent_median) - int(home_median)
+            else:
+                return 0
+
+        def home_rent_ratio(rent_median,home_median):
+            if rent_median != 0 and home_median != 0:
+                return float("{0:.3f}".format(home_median / rent_median))
+            else:
+                return 0
+
+        rat_1_bed = home_rent_ratio(rent_1_median,home_1_median)
+        diff_1_bed = home_rent_diff(rent_1_median,home_1_median)
+
+        print rat_1_bed
+        print diff_1_bed
+
+
+
+
+
+        #rent_home_diff_ratio(rent_1_median,home_1_median_c,diff_1_bed_c,rat_1_bed_c)
+        #print diff_1_bed_c
+        #rent_home_diff_ratio(rent_1_median,home_1_median_h,diff_1_bed_h,rat_1_bed_h)
+        #print diff_1_bed_h
+        #rent_home_diff_ratio(rent_1_median,home_1_median_th,diff_1_bed_th,rat_1_bed_th)
+        #print diff_1_bed_th
+
+
+'''
         if rent_1_median != 0 and home_1_median != 0:
             diff_1_bed = rent_1_median - home_1_median
             rat_1_bed = float("{0:.3f}".format(home_1_median / rent_1_median))
@@ -353,6 +401,8 @@ while craigs_url != '':
         else:
             diff_6_bed = 0
             rat_6_bed = 0
+
+
 
         overall_list = [craigs_url,neigh,city,state,today_a,'UPDATED',rat_1_bed,diff_1_bed,rat_2_bed,diff_2_bed,rat_3_bed,diff_3_bed,rat_4_bed,diff_4_bed,rat_5_bed,diff_5_bed,rat_6_bed,diff_6_bed]
 
