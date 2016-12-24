@@ -293,7 +293,7 @@ while craigs_url != '':
             rat_6_bed = 0
 
         overall_list = [craigs_url,neigh,city,state,today_a,'UPDATED',rat_1_bed,diff_1_bed,rat_2_bed,diff_2_bed,rat_3_bed,diff_3_bed,rat_4_bed,diff_4_bed,rat_5_bed,diff_5_bed,rat_6_bed,diff_6_bed]
-
+        '''
         csv_list = []
         with open(overall_filename, 'rb') as b:
             no_clue = csv.reader(b)
@@ -304,4 +304,4 @@ while craigs_url != '':
             for line2, row in enumerate(csv_list):
                  data = line_to_override.get(line2, row)
                  writer.writerow(data)
-u
+        '''

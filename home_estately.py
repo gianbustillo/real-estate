@@ -77,7 +77,7 @@ try:
         #print today_file_format
         #print today_minus_7
         ##if there is today's date already on cities.csv, skip it and go to the next city
-        
+
         if today_file_format > today_minus_7 and HomeStatusLastRun == 'Successful':
             print str(zipcode) + " " + str(neigh) + " " + str(city) + " already completed for the week"
             continue
@@ -825,6 +825,7 @@ try:
             overall_list = [craigs_url,neigh,city,state,zipcode,RentStatusLastRun, RentDateLastRun,'FAILED',today_a,'','','','','','','','','','','','','']
 
         #adding overall_list to main csv
+'''
         csv_list = []
         with open(overall_filename, 'rb') as b:
             no_clue = csv.reader(b)
@@ -836,7 +837,7 @@ try:
                  data = line_to_override.get(line2, row)
                  writer.writerow(data)
         #time.sleep(10)
-
+'''
 except (SystemExit, KeyboardInterrupt):
     raise
 except Exception, e:
