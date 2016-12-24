@@ -10,7 +10,17 @@ import logging
 ##SET PARAMETERS##
 minimum = 0
 
+def home_rent_diff(rent_median,home_median):
+    if rent_median != 0 and home_median != 0:
+        return int(rent_median) - int(home_median)
+    else:
+        return 0
 
+def home_rent_ratio(rent_median,home_median):
+    if rent_median != 0 and home_median != 0:
+        return float("{0:.3f}".format(home_median / rent_median))
+    else:
+        return 0
 
 
 #minimum number count
@@ -332,19 +342,6 @@ while craigs_url != '':
         '''
         print rent_1_median
         print home_1_median
-
-
-        def home_rent_diff(rent_median,home_median):
-            if rent_median != 0 and home_median != 0:
-                return int(rent_median) - int(home_median)
-            else:
-                return 0
-
-        def home_rent_ratio(rent_median,home_median):
-            if rent_median != 0 and home_median != 0:
-                return float("{0:.3f}".format(home_median / rent_median))
-            else:
-                return 0
 
         rat_1_bed = home_rent_ratio(rent_1_median,home_1_median)
         diff_1_bed = home_rent_diff(rent_1_median,home_1_median)
