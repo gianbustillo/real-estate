@@ -10,7 +10,7 @@ import logging
 
 #minimum number count
 minimum = 5
-overall_filename = 'cities.csv'
+overall_filename = 'cities_list2.csv'
 
 craigs_url = line = column = 0
 

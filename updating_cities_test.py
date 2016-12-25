@@ -45,10 +45,12 @@ while craigs_url != '':
     city = cities_states[line][column+2]
     state = cities_states[line][column+3]
     zipcode = cities_states[line][column+4]
-    rent_import_status = str(cities_states[line][column+5])
-    home_import_status = str(cities_states[line][column+7])
+    RentStatusLastRun = str(cities_states[line][column+5])
+    RentDateLastRun = str(cities_states[line][column+6])
+    HomeStatusLastRun = str(cities_states[line][column+7])
+    HomeDateLastRun = str(cities_states[line][column+8])
 
-    if rent_import_status != 'FAILED' and home_import_status != 'FAILED':
+    if RentStatusLastRun != 'FAILED' and HomeStatusLastRun != 'FAILED':
         if zipcode != '':
             folder_and_file_rent = str("rent_files/") + str(craigs_url) + str("/") + str(zipcode) + ".csv"
         elif neigh != '':
@@ -269,7 +271,6 @@ while craigs_url != '':
         else:
             home_6_median_h = 0
 
-
         if one_bed_home_list_th != []:
             home_1_median_th = float(np.median(one_bed_home_list_th))
         else:
@@ -332,76 +333,62 @@ while craigs_url != '':
         '''
         diff_1_bed = rat_1_bed = diff_1_bed_c = rat_1_bed_c = diff_1_bed_h = rat_1_bed_h = diff_1_bed_th = rat_1_bed_th = 0
 
-        '''
-        if rent_1_median != 0 and home_1_median != 0:
-            diff_1_bed = rent_1_median - home_1_median
-            rat_1_bed = float("{0:.3f}".format(home_1_median / rent_1_median))
-        else:
-            diff_1_bed = 0
-            rat_1_bed = 0
-        '''
-        print rent_1_median
-        print home_1_median
+
 
         rat_1_bed = home_rent_ratio(rent_1_median,home_1_median)
         diff_1_bed = home_rent_diff(rent_1_median,home_1_median)
+        rat_2_bed = home_rent_ratio(rent_2_median,home_2_median)
+        diff_2_bed = home_rent_diff(rent_2_median,home_2_median)
+        rat_3_bed = home_rent_ratio(rent_3_median,home_3_median)
+        diff_3_bed = home_rent_diff(rent_3_median,home_3_median)
+        rat_4_bed = home_rent_ratio(rent_4_median,home_4_median)
+        diff_4_bed = home_rent_diff(rent_4_median,home_4_median)
+        rat_5_bed = home_rent_ratio(rent_5_median,home_5_median)
+        diff_5_bed = home_rent_diff(rent_5_median,home_5_median)
+        rat_6_bed = home_rent_ratio(rent_6_median,home_6_median)
+        diff_6_bed = home_rent_diff(rent_6_median,home_6_median)
 
-        print rat_1_bed
-        print diff_1_bed
-
-
-
-
-
-        #rent_home_diff_ratio(rent_1_median,home_1_median_c,diff_1_bed_c,rat_1_bed_c)
-        #print diff_1_bed_c
-        #rent_home_diff_ratio(rent_1_median,home_1_median_h,diff_1_bed_h,rat_1_bed_h)
-        #print diff_1_bed_h
-        #rent_home_diff_ratio(rent_1_median,home_1_median_th,diff_1_bed_th,rat_1_bed_th)
-        #print diff_1_bed_th
-
-
-'''
-        if rent_1_median != 0 and home_1_median != 0:
-            diff_1_bed = rent_1_median - home_1_median
-            rat_1_bed = float("{0:.3f}".format(home_1_median / rent_1_median))
-        else:
-            diff_1_bed = 0
-            rat_1_bed = 0
-        if rent_2_median != 0 and home_2_median !=0:
-            diff_2_bed = rent_2_median - home_2_median
-            rat_2_bed = float("{0:.3f}".format(home_2_median / rent_2_median))
-        else:
-            diff_2_bed = 0
-            rat_2_bed = 0
-        if rent_3_median != 0 and home_3_median != 0:
-            diff_3_bed = rent_3_median - home_3_median
-            rat_3_bed = float("{0:.3f}".format(home_3_median / rent_3_median))
-        else:
-            diff_3_bed = 0
-            rat_3_bed = 0
-        if rent_4_median != 0 and home_4_median != 0:
-            diff_4_bed = rent_4_median - home_4_median
-            rat_4_bed = float("{0:.3f}".format(home_4_median / rent_4_median))
-        else:
-            diff_4_bed = 0
-            rat_4_bed = 0
-        if rent_5_median != 0 and home_5_median != 0:
-            diff_5_bed = rent_5_median - home_5_median
-            rat_5_bed = float("{0:.3f}".format(home_5_median / rent_5_median))
-        else:
-            diff_5_bed = 0
-            rat_5_bed = 0
-        if rent_6_median != 0 and home_6_median != 0:
-            diff_6_bed = rent_6_median - home_6_median
-            rat_6_bed = float("{0:.3f}".format(home_6_median / rent_6_median))
-        else:
-            diff_6_bed = 0
-            rat_6_bed = 0
+        rat_1_bed_c = home_rent_ratio(rent_1_median,home_1_median_c)
+        diff_1_bed_c = home_rent_diff(rent_1_median,home_1_median_c)
+        rat_2_bed_c = home_rent_ratio(rent_2_median,home_2_median_c)
+        diff_2_bed_c = home_rent_diff(rent_2_median,home_2_median_c)
+        rat_3_bed_c = home_rent_ratio(rent_3_median,home_3_median_c)
+        diff_3_bed_c = home_rent_diff(rent_3_median,home_3_median_c)
+        rat_4_bed_c = home_rent_ratio(rent_4_median,home_4_median_c)
+        diff_4_bed_c = home_rent_diff(rent_4_median,home_4_median_c)
+        rat_5_bed_c = home_rent_ratio(rent_5_median,home_5_median_c)
+        diff_5_bed_c = home_rent_diff(rent_5_median,home_5_median_c)
+        rat_6_bed_c = home_rent_ratio(rent_6_median,home_6_median_c)
+        diff_6_bed_c = home_rent_diff(rent_6_median,home_6_median_c)
 
 
+        rat_1_bed_h = home_rent_ratio(rent_1_median,home_1_median_h)
+        diff_1_bed_h = home_rent_diff(rent_1_median,home_1_median_h)
+        rat_2_bed_h = home_rent_ratio(rent_2_median,home_2_median_h)
+        diff_2_bed_h = home_rent_diff(rent_2_median,home_2_median_h)
+        rat_3_bed_h = home_rent_ratio(rent_3_median,home_3_median_h)
+        diff_3_bed_h = home_rent_diff(rent_3_median,home_3_median_h)
+        rat_4_bed_h = home_rent_ratio(rent_4_median,home_4_median_h)
+        diff_4_bed_h = home_rent_diff(rent_4_median,home_4_median_h)
+        rat_5_bed_h = home_rent_ratio(rent_5_median,home_5_median_h)
+        diff_5_bed_h = home_rent_diff(rent_5_median,home_5_median_h)
+        rat_6_bed_h = home_rent_ratio(rent_6_median,home_6_median_h)
+        diff_6_bed_h = home_rent_diff(rent_6_median,home_6_median_h)
 
-        overall_list = [craigs_url,neigh,city,state,today_a,'UPDATED',rat_1_bed,diff_1_bed,rat_2_bed,diff_2_bed,rat_3_bed,diff_3_bed,rat_4_bed,diff_4_bed,rat_5_bed,diff_5_bed,rat_6_bed,diff_6_bed]
+        rat_1_bed_th = home_rent_ratio(rent_1_median,home_1_median_th)
+        diff_1_bed_th = home_rent_diff(rent_1_median,home_1_median_th)
+        rat_2_bed_th = home_rent_ratio(rent_2_median,home_2_median_th)
+        diff_2_bed_th = home_rent_diff(rent_2_median,home_2_median_th)
+        rat_3_bed_th = home_rent_ratio(rent_3_median,home_3_median_th)
+        diff_3_bed_th = home_rent_diff(rent_3_median,home_3_median_th)
+        rat_4_bed_th = home_rent_ratio(rent_4_median,home_4_median_th)
+        diff_4_bed_th = home_rent_diff(rent_4_median,home_4_median_th)
+        rat_5_bed_th = home_rent_ratio(rent_5_median,home_5_median_th)
+        diff_5_bed_th = home_rent_diff(rent_5_median,home_5_median_th)
+        rat_6_bed_th = home_rent_ratio(rent_6_median,home_6_median_th)
+        diff_6_bed_th = home_rent_diff(rent_6_median,home_6_median_th)
+
+        overall_list = [craigs_url,neigh,city,state,zipcode,RentStatusLastRun,RentDateLastRun,HomeStatusLastRun,HomeDateLastRun,'||',today_a,rat_1_bed,diff_1_bed,rat_2_bed,diff_2_bed,rat_3_bed,diff_3_bed,rat_4_bed,diff_4_bed,rat_5_bed,diff_5_bed,rat_6_bed,diff_6_bed,rat_1_bed_c,diff_1_bed_c,rat_2_bed_c,diff_2_bed_c,rat_3_bed_c,diff_3_bed_c,rat_4_bed_c,diff_4_bed_c,rat_5_bed_c,diff_5_bed_c,rat_6_bed_c,diff_6_bed_c,rat_1_bed_h,diff_1_bed_h,rat_2_bed_h,diff_2_bed_h,rat_3_bed_h,diff_3_bed_h,rat_4_bed_h,diff_4_bed_h,rat_5_bed_h,diff_5_bed_h,rat_6_bed_h,diff_6_bed_h,rat_1_bed_th,diff_1_bed_th,rat_2_bed_th,diff_2_bed_th,rat_3_bed_th,diff_3_bed_th,rat_4_bed_th,diff_4_bed_th,rat_5_bed_th,diff_5_bed_th,rat_6_bed_th,diff_6_bed_th]
 
         csv_list = []
         with open(overall_filename, 'rb') as b:
@@ -413,4 +400,3 @@ while craigs_url != '':
             for line2, row in enumerate(csv_list):
                  data = line_to_override.get(line2, row)
                  writer.writerow(data)
-'''
