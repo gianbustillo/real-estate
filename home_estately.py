@@ -178,6 +178,7 @@ try:
         not_found = meta.find('href="h')
         if not_found != -1:
             while price_loc != -1:
+                hoa = condo = 0
                 property_url_loc = div.find('js-map-listing-result result-item clearfix js-must-be-removed" href="')
                 property_url_loc_end = div.find('">',property_url_loc)
                 property_url = str(div[property_url_loc+69:property_url_loc_end])
@@ -205,74 +206,94 @@ try:
                 b = requests.get(property_url)
                 soup = BeautifulSoup(b.content,"html.parser")
                 home_site = str(soup.find_all("div", {"class":"row margin-bottom-20"}))
-                hoa_loc = home_site.find('Condo Coop Fee:')
+                condo_fee_loc = home_site.find('Condo Coop Fee:')
+                hoa_fee_loc = home_site.find('HOA Fees:')
+                if condo_fee_loc == -1:
+                    condo = 0
+                if hoa_fee_loc == -1:
+                    hoa = 0
                 #time.sleep(2)
-                if hoa_loc != -1:
-                    hoa_loc_end = home_site.find('</p>',hoa_loc)
-                    hoa = float(home_site[hoa_loc+18:hoa_loc_end-2].replace(',',''))
-                    print "HOA: " + str(hoa)
-                else:
-                    print "No HOA found"
-
+                if condo_fee_loc != -1:
+                    condo_fee_loc_end = home_site.find('</p>',condo_fee_loc)
+                    print 'condo_fee_loc' + str(home_site[condo_fee_loc+17:condo_fee_loc+18])
+                    if home_site[condo_fee_loc+17:condo_fee_loc+18] == '$':
+                        print home_site[condo_fee_loc+18:condo_fee_loc_end-2]
+                        condo = float(home_site[condo_fee_loc+18:condo_fee_loc_end-2].replace(',',''))
+                        print "Condo Fee: " + str(condo)
+                    else:
+                        condo_fee_loc = -1
+                if hoa_fee_loc != -1:
+                    hoa_fee_loc_end = home_site.find('</p>',hoa_fee_loc)
+                    print 'hoa_fee_loc' + str(home_site[hoa_fee_loc+11:hoa_fee_loc+12])
+                    if home_site[hoa_fee_loc+11:hoa_fee_loc+12] == '$':
+                        print home_site[hoa_fee_loc+12:hoa_fee_loc_end-2]
+                        hoa = float(home_site[hoa_fee_loc+12:hoa_fee_loc_end-2].replace(',',''))
+                        print "HOA Fees: " + str(hoa)
+                    #since I determine if it's condo fee by using condo fee loc, I set it to hoa fee loc so it's treated as the same
+                        condo_fee_loc = hoa_fee_loc
+                    else:
+                        hoa_fee_loc = -1
+                hoa = hoa + condo
+                print 'Total sum HOA and Condo: ' + str(hoa)
                 #general
                 #no HOA
-                if bed == '1' and date_record > before_date_home and hoa_loc == -1:
+                if bed == '1' and date_record > before_date_home and condo_fee_loc == -1:
                     home_1_bd.append(home_price)
                     home_1_bd_both.append(mortgage(home_price))
                     home_1_count +=1
 
-                if bed == '2' and date_record > before_date_home and hoa_loc == -1:
+                if bed == '2' and date_record > before_date_home and condo_fee_loc == -1:
                     home_2_bd.append(home_price)
                     home_2_bd_both.append(mortgage(home_price))
                     home_2_count +=1
 
-                elif bed == '3' and date_record > before_date_home and hoa_loc == -1:
+                elif bed == '3' and date_record > before_date_home and condo_fee_loc == -1:
                     home_3_bd.append(home_price)
                     home_3_bd_both.append(mortgage(home_price))
                     home_3_count +=1
 
-                elif bed == '4' and date_record > before_date_home and hoa_loc == -1:
+                elif bed == '4' and date_record > before_date_home and condo_fee_loc == -1:
                     home_4_bd.append(home_price)
                     home_4_bd_both.append(mortgage(home_price))
                     home_4_count +=1
 
-                elif bed == '5' and date_record > before_date_home and hoa_loc == -1:
+                elif bed == '5' and date_record > before_date_home and condo_fee_loc == -1:
                     home_5_bd.append(home_price)
                     home_5_bd_both.append(mortgage(home_price))
                     home_5_count +=1
 
-                elif bed == '6' and date_record > before_date_home and hoa_loc == -1:
+                elif bed == '6' and date_record > before_date_home and condo_fee_loc == -1:
                     home_6_bd.append(home_price)
                     home_6_bd_both.append(mortgage(home_price))
                     home_6_count +=1
 
                 #HOA
-                if bed == '1' and date_record > before_date_home and hoa_loc != -1:
+                if bed == '1' and date_record > before_date_home and condo_fee_loc != -1:
                     home_1_bd_hoa.append(home_price)
                     home_1_count_hoa +=1
                     hoa_1_bd.append(hoa)
                     home_1_bd_both.append(mortgage(home_price)+hoa)
-                if bed == '2' and date_record > before_date_home and hoa_loc != -1:
+                if bed == '2' and date_record > before_date_home and condo_fee_loc != -1:
                     home_2_bd_hoa.append(home_price)
                     home_2_count_hoa +=1
                     hoa_2_bd.append(hoa)
                     home_2_bd_both.append(mortgage(home_price)+hoa)
-                elif bed == '3' and date_record > before_date_home and hoa_loc != -1:
+                elif bed == '3' and date_record > before_date_home and condo_fee_loc != -1:
                     home_3_bd_hoa.append(home_price)
                     home_3_count_hoa +=1
                     hoa_3_bd.append(hoa)
                     home_3_bd_both.append(mortgage(home_price)+hoa)
-                elif bed == '4' and date_record > before_date_home and hoa_loc != -1:
+                elif bed == '4' and date_record > before_date_home and condo_fee_loc != -1:
                     home_4_bd_hoa.append(home_price)
                     home_4_count_hoa +=1
                     hoa_4_bd.append(hoa)
                     home_4_bd_both.append(mortgage(home_price)+hoa)
-                elif bed == '5' and date_record > before_date_home and hoa_loc != -1:
+                elif bed == '5' and date_record > before_date_home and condo_fee_loc != -1:
                     home_5_bd_hoa.append(home_price)
                     home_5_count_hoa +=1
                     hoa_5_bd.append(hoa)
                     home_5_bd_both.append(mortgage(home_price)+hoa)
-                elif bed == '6' and date_record > before_date_home and hoa_loc != -1:
+                elif bed == '6' and date_record > before_date_home and condo_fee_loc != -1:
                     home_6_bd_hoa.append(home_price)
                     home_6_count_hoa +=1
                     hoa_6_bd.append(hoa)
@@ -281,63 +302,63 @@ try:
 
                 #condo
                 #no HOA
-                if bed == '1' and date_record > before_date_home and hoa_loc == -1 and property_type == 'Condo':
+                if bed == '1' and date_record > before_date_home and condo_fee_loc == -1 and property_type == 'Condo':
                     home_1_bd_c.append(home_price)
                     home_1_bd_both_c.append(mortgage(home_price))
                     home_1_count_c +=1
 
-                if bed == '2' and date_record > before_date_home and hoa_loc == -1 and property_type == 'Condo':
+                if bed == '2' and date_record > before_date_home and condo_fee_loc == -1 and property_type == 'Condo':
                     home_2_bd_c.append(home_price)
                     home_2_bd_both_c.append(mortgage(home_price))
                     home_2_count_c +=1
 
-                elif bed == '3' and date_record > before_date_home and hoa_loc == -1 and property_type == 'Condo':
+                elif bed == '3' and date_record > before_date_home and condo_fee_loc == -1 and property_type == 'Condo':
                     home_3_bd_c.append(home_price)
                     home_3_bd_both_c.append(mortgage(home_price))
                     home_3_count_c +=1
 
-                elif bed == '4' and date_record > before_date_home and hoa_loc == -1 and property_type == 'Condo':
+                elif bed == '4' and date_record > before_date_home and condo_fee_loc == -1 and property_type == 'Condo':
                     home_4_bd_c.append(home_price)
                     home_4_bd_both_c.append(mortgage(home_price))
                     home_4_count_c +=1
 
-                elif bed == '5' and date_record > before_date_home and hoa_loc == -1 and property_type == 'Condo':
+                elif bed == '5' and date_record > before_date_home and condo_fee_loc == -1 and property_type == 'Condo':
                     home_5_bd_c.append(home_price)
                     home_5_bd_both_c.append(mortgage(home_price))
                     home_5_count_c +=1
 
-                elif bed == '6' and date_record > before_date_home and hoa_loc == -1 and property_type == 'Condo':
+                elif bed == '6' and date_record > before_date_home and condo_fee_loc == -1 and property_type == 'Condo':
                     home_6_bd_c.append(home_price)
                     home_6_bd_both_c.append(mortgage(home_price))
                     home_6_count_c +=1
 
                 #HOA
-                if bed == '1' and date_record > before_date_home and hoa_loc != -1 and property_type == 'Condo':
+                if bed == '1' and date_record > before_date_home and condo_fee_loc != -1 and property_type == 'Condo':
                     home_1_bd_hoa_c.append(home_price)
                     home_1_count_hoa_c +=1
                     hoa_1_bd_c.append(hoa)
                     home_1_bd_both_c.append(mortgage(home_price)+hoa)
-                if bed == '2' and date_record > before_date_home and hoa_loc != -1 and property_type == 'Condo':
+                if bed == '2' and date_record > before_date_home and condo_fee_loc != -1 and property_type == 'Condo':
                     home_2_bd_hoa_c.append(home_price)
                     home_2_count_hoa_c +=1
                     hoa_2_bd_c.append(hoa)
                     home_2_bd_both_c.append(mortgage(home_price)+hoa)
-                elif bed == '3' and date_record > before_date_home and hoa_loc != -1 and property_type == 'Condo':
+                elif bed == '3' and date_record > before_date_home and condo_fee_loc != -1 and property_type == 'Condo':
                     home_3_bd_hoa_c.append(home_price)
                     home_3_count_hoa_c +=1
                     hoa_3_bd_c.append(hoa)
                     home_3_bd_both_c.append(mortgage(home_price)+hoa)
-                elif bed == '4' and date_record > before_date_home and hoa_loc != -1 and property_type == 'Condo':
+                elif bed == '4' and date_record > before_date_home and condo_fee_loc != -1 and property_type == 'Condo':
                     home_4_bd_hoa_c.append(home_price)
                     home_4_count_hoa_c +=1
                     hoa_4_bd_c.append(hoa)
                     home_4_bd_both_c.append(mortgage(home_price)+hoa)
-                elif bed == '5' and date_record > before_date_home and hoa_loc != -1 and property_type == 'Condo':
+                elif bed == '5' and date_record > before_date_home and condo_fee_loc != -1 and property_type == 'Condo':
                     home_5_bd_hoa_c.append(home_price)
                     home_5_count_hoa_c +=1
                     hoa_5_bd_c.append(hoa)
                     home_5_bd_both_c.append(mortgage(home_price)+hoa)
-                elif bed == '6' and date_record > before_date_home and hoa_loc != -1 and property_type == 'Condo':
+                elif bed == '6' and date_record > before_date_home and condo_fee_loc != -1 and property_type == 'Condo':
                     home_6_bd_hoa_c.append(home_price)
                     home_6_count_hoa_c +=1
                     hoa_6_bd_c.append(hoa)
@@ -345,63 +366,63 @@ try:
 
                 #house
                 #no HOA
-                if bed == '1' and date_record > before_date_home and hoa_loc == -1 and property_type == 'House':
+                if bed == '1' and date_record > before_date_home and condo_fee_loc == -1 and property_type == 'House':
                     home_1_bd_h.append(home_price)
                     home_1_bd_both_h.append(mortgage(home_price))
                     home_1_count_h +=1
 
-                if bed == '2' and date_record > before_date_home and hoa_loc == -1 and property_type == 'House':
+                if bed == '2' and date_record > before_date_home and condo_fee_loc == -1 and property_type == 'House':
                     home_2_bd_h.append(home_price)
                     home_2_bd_both_h.append(mortgage(home_price))
                     home_2_count_h +=1
 
-                elif bed == '3' and date_record > before_date_home and hoa_loc == -1 and property_type == 'House':
+                elif bed == '3' and date_record > before_date_home and condo_fee_loc == -1 and property_type == 'House':
                     home_3_bd_h.append(home_price)
                     home_3_bd_both_h.append(mortgage(home_price))
                     home_3_count_h +=1
 
-                elif bed == '4' and date_record > before_date_home and hoa_loc == -1 and property_type == 'House':
+                elif bed == '4' and date_record > before_date_home and condo_fee_loc == -1 and property_type == 'House':
                     home_4_bd_h.append(home_price)
                     home_4_bd_both_h.append(mortgage(home_price))
                     home_4_count_h +=1
 
-                elif bed == '5' and date_record > before_date_home and hoa_loc == -1 and property_type == 'House':
+                elif bed == '5' and date_record > before_date_home and condo_fee_loc == -1 and property_type == 'House':
                     home_5_bd_h.append(home_price)
                     home_5_bd_both_h.append(mortgage(home_price))
                     home_5_count_h +=1
 
-                elif bed == '6' and date_record > before_date_home and hoa_loc == -1 and property_type == 'House':
+                elif bed == '6' and date_record > before_date_home and condo_fee_loc == -1 and property_type == 'House':
                     home_6_bd_h.append(home_price)
                     home_6_bd_both_h.append(mortgage(home_price))
                     home_6_count_h +=1
 
                 #HOA
-                if bed == '1' and date_record > before_date_home and hoa_loc != -1 and property_type == 'House':
+                if bed == '1' and date_record > before_date_home and condo_fee_loc != -1 and property_type == 'House':
                     home_1_bd_hoa_h.append(home_price)
                     home_1_count_hoa_h +=1
                     hoa_1_bd_h.append(hoa)
                     home_1_bd_both_h.append(mortgage(home_price)+hoa)
-                if bed == '2' and date_record > before_date_home and hoa_loc != -1 and property_type == 'House':
+                if bed == '2' and date_record > before_date_home and condo_fee_loc != -1 and property_type == 'House':
                     home_2_bd_hoa_h.append(home_price)
                     home_2_count_hoa_h +=1
                     hoa_2_bd_h.append(hoa)
                     home_2_bd_both_h.append(mortgage(home_price)+hoa)
-                elif bed == '3' and date_record > before_date_home and hoa_loc != -1 and property_type == 'House':
+                elif bed == '3' and date_record > before_date_home and condo_fee_loc != -1 and property_type == 'House':
                     home_3_bd_hoa_h.append(home_price)
                     home_3_count_hoa_h +=1
                     hoa_3_bd_h.append(hoa)
                     home_3_bd_both_h.append(mortgage(home_price)+hoa)
-                elif bed == '4' and date_record > before_date_home and hoa_loc != -1 and property_type == 'House':
+                elif bed == '4' and date_record > before_date_home and condo_fee_loc != -1 and property_type == 'House':
                     home_4_bd_hoa_h.append(home_price)
                     home_4_count_hoa_h +=1
                     hoa_4_bd_h.append(hoa)
                     home_4_bd_both_h.append(mortgage(home_price)+hoa)
-                elif bed == '5' and date_record > before_date_home and hoa_loc != -1 and property_type == 'House':
+                elif bed == '5' and date_record > before_date_home and condo_fee_loc != -1 and property_type == 'House':
                     home_5_bd_hoa_h.append(home_price)
                     home_5_count_hoa_h +=1
                     hoa_5_bd_h.append(hoa)
                     home_5_bd_both_h.append(mortgage(home_price)+hoa)
-                elif bed == '6' and date_record > before_date_home and hoa_loc != -1 and property_type == 'House':
+                elif bed == '6' and date_record > before_date_home and condo_fee_loc != -1 and property_type == 'House':
                     home_6_bd_hoa_h.append(home_price)
                     home_6_count_hoa_h +=1
                     hoa_6_bd_h.append(hoa)
@@ -410,63 +431,63 @@ try:
 
                 #townhouse
                 #no HOA
-                if bed == '1' and date_record > before_date_home and hoa_loc == -1 and property_type == 'Townhouse':
+                if bed == '1' and date_record > before_date_home and condo_fee_loc == -1 and property_type == 'Townhouse':
                     home_1_bd_th.append(home_price)
                     home_1_bd_both_th.append(mortgage(home_price))
                     home_1_count_th +=1
 
-                if bed == '2' and date_record > before_date_home and hoa_loc == -1 and property_type == 'Townhouse':
+                if bed == '2' and date_record > before_date_home and condo_fee_loc == -1 and property_type == 'Townhouse':
                     home_2_bd_th.append(home_price)
                     home_2_bd_both_th.append(mortgage(home_price))
                     home_2_count_th +=1
 
-                elif bed == '3' and date_record > before_date_home and hoa_loc == -1 and property_type == 'Townhouse':
+                elif bed == '3' and date_record > before_date_home and condo_fee_loc == -1 and property_type == 'Townhouse':
                     home_3_bd_th.append(home_price)
                     home_3_bd_both_th.append(mortgage(home_price))
                     home_3_count_th +=1
 
-                elif bed == '4' and date_record > before_date_home and hoa_loc == -1 and property_type == 'Townhouse':
+                elif bed == '4' and date_record > before_date_home and condo_fee_loc == -1 and property_type == 'Townhouse':
                     home_4_bd_th.append(home_price)
                     home_4_bd_both_th.append(mortgage(home_price))
                     home_4_count_th +=1
 
-                elif bed == '5' and date_record > before_date_home and hoa_loc == -1 and property_type == 'Townhouse':
+                elif bed == '5' and date_record > before_date_home and condo_fee_loc == -1 and property_type == 'Townhouse':
                     home_5_bd_th.append(home_price)
                     home_5_bd_both_th.append(mortgage(home_price))
                     home_5_count_th +=1
 
-                elif bed == '6' and date_record > before_date_home and hoa_loc == -1 and property_type == 'Townhouse':
+                elif bed == '6' and date_record > before_date_home and condo_fee_loc == -1 and property_type == 'Townhouse':
                     home_6_bd_th.append(home_price)
                     home_6_bd_both_th.append(mortgage(home_price))
                     home_6_count_th +=1
 
                 #HOA
-                if bed == '1' and date_record > before_date_home and hoa_loc != -1 and property_type == 'Townhouse':
+                if bed == '1' and date_record > before_date_home and condo_fee_loc != -1 and property_type == 'Townhouse':
                     home_1_bd_hoa_th.append(home_price)
                     home_1_count_hoa_th +=1
                     hoa_1_bd_th.append(hoa)
                     home_1_bd_both_th.append(mortgage(home_price)+hoa)
-                if bed == '2' and date_record > before_date_home and hoa_loc != -1 and property_type == 'Townhouse':
+                if bed == '2' and date_record > before_date_home and condo_fee_loc != -1 and property_type == 'Townhouse':
                     home_2_bd_hoa_th.append(home_price)
                     home_2_count_hoa_th +=1
                     hoa_2_bd_th.append(hoa)
                     home_2_bd_both_th.append(mortgage(home_price)+hoa)
-                elif bed == '3' and date_record > before_date_home and hoa_loc != -1 and property_type == 'Townhouse':
+                elif bed == '3' and date_record > before_date_home and condo_fee_loc != -1 and property_type == 'Townhouse':
                     home_3_bd_hoa_th.append(home_price)
                     home_3_count_hoa_th +=1
                     hoa_3_bd_th.append(hoa)
                     home_3_bd_both_th.append(mortgage(home_price)+hoa)
-                elif bed == '4' and date_record > before_date_home and hoa_loc != -1 and property_type == 'Townhouse':
+                elif bed == '4' and date_record > before_date_home and condo_fee_loc != -1 and property_type == 'Townhouse':
                     home_4_bd_hoa_th.append(home_price)
                     home_4_count_hoa_th +=1
                     hoa_4_bd_th.append(hoa)
                     home_4_bd_both_th.append(mortgage(home_price)+hoa)
-                elif bed == '5' and date_record > before_date_home and hoa_loc != -1 and property_type == 'Townhouse':
+                elif bed == '5' and date_record > before_date_home and condo_fee_loc != -1 and property_type == 'Townhouse':
                     home_5_bd_hoa_th.append(home_price)
                     home_5_count_hoa_th +=1
                     hoa_5_bd_th.append(hoa)
                     home_5_bd_both_th.append(mortgage(home_price)+hoa)
-                elif bed == '6' and date_record > before_date_home and hoa_loc != -1 and property_type == 'Townhouse':
+                elif bed == '6' and date_record > before_date_home and condo_fee_loc != -1 and property_type == 'Townhouse':
                     home_6_bd_hoa_th.append(home_price)
                     home_6_count_hoa_th +=1
                     hoa_6_bd_th.append(hoa)
@@ -637,7 +658,6 @@ try:
             hoa_6_bd_median_c = median_bd(hoa_6_bd_c,hoa_6_bd_median_c)
             print 'hoa_6_bd_median_c    ' + str(hoa_6_bd_median_c)
 
-
             #house
             print 'home_1_bd_h   ' + str(home_1_bd_h)
             print 'home_2_bd_h   ' + str(home_2_bd_h)
@@ -706,7 +726,6 @@ try:
             home_6_both_median_h = median_bd(home_6_bd_both_h,home_6_both_median_h)
             print 'home_6_both_median_h    ' + str(home_6_both_median_h)
 
-
             hoa_1_bd_median_h = median_bd(hoa_1_bd_h,hoa_1_bd_median_h)
             print 'hoa_1_bd_median_h    ' + str(hoa_1_bd_median_h)
             hoa_2_bd_median_h = median_bd(hoa_2_bd_h,hoa_2_bd_median_h)
@@ -719,7 +738,6 @@ try:
             print 'hoa_5_bd_median_h    ' + str(hoa_5_bd_median_h)
             hoa_6_bd_median_h = median_bd(hoa_6_bd_h,hoa_6_bd_median_h)
             print 'hoa_6_bd_median_h    ' + str(hoa_6_bd_median_h)
-
 
             #townhouse
             print 'home_1_bd_th   ' + str(home_1_bd_th)
@@ -789,7 +807,6 @@ try:
             home_6_both_median_th = median_bd(home_6_bd_both_th,home_6_both_median_th)
             print 'home_6_both_median_th    ' + str(home_6_both_median_th)
 
-
             hoa_1_bd_median_th = median_bd(hoa_1_bd_th,hoa_1_bd_median_th)
             print 'hoa_1_bd_median_th    ' + str(hoa_1_bd_median_th)
             hoa_2_bd_median_th = median_bd(hoa_2_bd_th,hoa_2_bd_median_th)
@@ -804,6 +821,7 @@ try:
             print 'hoa_6_bd_median_th    ' + str(hoa_6_bd_median_th)
 
             overall_list = [craigs_url,neigh,city,state,zipcode,RentStatusLastRun,RentDateLastRun,'Successful',today_a]
+
 
             city_rent_home = [today_a,home_1_median,home_1_count,home_1_median_hoa,hoa_1_bd_median,home_1_count_hoa,home_1_both_median,home_1_count+home_1_count_hoa,home_2_median,home_2_count,home_2_median_hoa,hoa_2_bd_median,home_2_count_hoa,home_2_both_median,home_2_count+home_2_count_hoa,home_3_median,home_3_count,home_3_median_hoa,hoa_3_bd_median,home_3_count_hoa,home_3_both_median,home_3_count+home_3_count_hoa,home_4_median,home_4_count,home_4_median_hoa,hoa_4_bd_median,home_4_count_hoa,home_4_both_median,home_4_count+home_4_count_hoa,home_5_median,home_5_count,home_5_median_hoa,hoa_5_bd_median,home_5_count_hoa,home_5_both_median,home_5_count+home_5_count_hoa,home_6_median,home_6_count,home_6_median_hoa,hoa_6_bd_median,home_6_count_hoa,home_6_both_median,home_6_count+home_6_count_hoa,home_1_median_c,home_1_count_c,home_1_median_hoa_c,hoa_1_bd_median_c,home_1_count_hoa_c,home_1_both_median_c,home_1_count_c+home_1_count_hoa_c,home_2_median_c,home_2_count_c,home_2_median_hoa_c,hoa_2_bd_median_c,home_2_count_hoa_c,home_2_both_median_c,home_2_count_c+home_2_count_hoa_c,home_3_median_c,home_3_count_c,home_3_median_hoa_c,hoa_3_bd_median_c,home_3_count_hoa_c,home_3_both_median_c,home_3_count_c+home_3_count_hoa_c,home_4_median_c,home_4_count_c,home_4_median_hoa_c,hoa_4_bd_median_c,home_4_count_hoa_c,home_4_both_median_c,home_4_count_c+home_4_count_hoa_c,home_5_median_c,home_5_count_c,home_5_median_hoa_c,hoa_5_bd_median_c,home_5_count_hoa_c,home_5_both_median_c,home_5_count_c+home_5_count_hoa_c,home_6_median_c,home_6_count_c,home_6_median_hoa_c,hoa_6_bd_median_c,home_6_count_hoa_c,home_6_both_median_c,home_6_count_c+home_6_count_hoa_c,home_1_median_h,home_1_count_h,home_1_median_hoa_h,hoa_1_bd_median_h,home_1_count_hoa_h,home_1_both_median_h,home_1_count_h+home_1_count_hoa_h,home_2_median_h,home_2_count_h,home_2_median_hoa_h,hoa_2_bd_median_h,home_2_count_hoa_h,home_2_both_median_h,home_2_count_h+home_2_count_hoa_h,home_3_median_h,home_3_count_h,home_3_median_hoa_h,hoa_3_bd_median_h,home_3_count_hoa_h,home_3_both_median_h,home_3_count_h+home_3_count_hoa_h,home_4_median_h,home_4_count_h,home_4_median_hoa_h,hoa_4_bd_median_h,home_4_count_hoa_h,home_4_both_median_h,home_4_count_h+home_4_count_hoa_h,home_5_median_h,home_5_count_h,home_5_median_hoa_h,hoa_5_bd_median_h,home_5_count_hoa_h,home_5_both_median_h,home_5_count_h+home_5_count_hoa_h,home_6_median_h,home_6_count_h,home_6_median_hoa_h,hoa_6_bd_median_h,home_6_count_hoa_h,home_6_both_median_h,home_6_count_h+home_6_count_hoa_h,home_1_median_th,home_1_count_th,home_1_median_hoa_th,hoa_1_bd_median_th,home_1_count_hoa_th,home_1_both_median_th,home_1_count_th+home_1_count_hoa_th,home_2_median_th,home_2_count_th,home_2_median_hoa_th,hoa_2_bd_median_th,home_2_count_hoa_th,home_2_both_median_th,home_2_count_th+home_2_count_hoa_th,home_3_median_th,home_3_count_th,home_3_median_hoa_th,hoa_3_bd_median_th,home_3_count_hoa_th,home_3_both_median_th,home_3_count_th+home_3_count_hoa_th,home_4_median_th,home_4_count_th,home_4_median_hoa_th,hoa_4_bd_median_th,home_4_count_hoa_th,home_4_both_median_th,home_4_count_th+home_4_count_hoa_th,home_5_median_th,home_5_count_th,home_5_median_hoa_th,hoa_5_bd_median_th,home_5_count_hoa_th,home_5_both_median_th,home_5_count_th+home_5_count_hoa_th,home_6_median_th,home_6_count_th,home_6_median_hoa_th,hoa_6_bd_median_th,home_6_count_hoa_th,home_6_both_median_th,home_6_count_th+home_6_count_hoa_th]
 

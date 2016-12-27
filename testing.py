@@ -9,6 +9,12 @@ import logging
 import os
 import smtplib
 
+a = 5
+b = 6
+if (a ==5 and b ==6) or (b ==3 and a==4):
+    print 'nooo'
+
+'''
 
 today_file = '2016-11-10'
 today_file_format = datetime.datetime.strptime(today_file, '%Y-%m-%d').date()
@@ -17,7 +23,7 @@ today_minus_7 = datetime.date.today() - timedelta(days=7)
 
 if today_file_format > today_minus_7:
     print 'e'
-
+'''
 #before_date_home = before_date_home.strftime('%m/%d/%Y')
 #today_file = datetime.datetime.strptime(today_file, '%m/%d/%Y').date()
 #print today_file
