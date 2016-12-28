@@ -182,7 +182,7 @@ try:
                 property_url_loc = div.find('js-map-listing-result result-item clearfix js-must-be-removed" href="')
                 property_url_loc_end = div.find('">',property_url_loc)
                 property_url = str(div[property_url_loc+69:property_url_loc_end])
-                print '***********************'
+                print '***************************************************************'
                 print property_url
                 date_loc = div.find('<b>Sold ')
                 date_loc_end = div.find('</b>',date_loc)
@@ -224,9 +224,9 @@ try:
                         condo_fee_loc = -1
                 if hoa_fee_loc != -1:
                     hoa_fee_loc_end = home_site.find('</p>',hoa_fee_loc)
-                    print 'hoa_fee_loc' + str(home_site[hoa_fee_loc+11:hoa_fee_loc+12])
+
                     if home_site[hoa_fee_loc+11:hoa_fee_loc+12] == '$':
-                        print home_site[hoa_fee_loc+12:hoa_fee_loc_end-2]
+                        #print home_site[hoa_fee_loc+12:hoa_fee_loc_end-2]
                         hoa = float(home_site[hoa_fee_loc+12:hoa_fee_loc_end-2].replace(',',''))
                         print "HOA Fees: " + str(hoa)
                     #since I determine if it's condo fee by using condo fee loc, I set it to hoa fee loc so it's treated as the same
