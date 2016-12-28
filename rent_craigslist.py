@@ -269,7 +269,7 @@ except Exception, e:
     logger.error(FORMAT, exc_info=True)
 
 
-#os.system('updating_cities_test.py')
+os.system('updating_cities.py')
 
 content = 'rent_craigslist.py - COMPLETED'
 mail = smtplib.SMTP('smtp.gmail.com',587)

@@ -28,3 +28,8 @@ Traceback (most recent call last):
   File "rent_craigslist.py", line 51, in <module>
     craigs_url = cities_states[line][column]
 IndexError: list index out of range
+2016-12-28 11:26:45,378 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "rent_craigslist.py", line 51, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range

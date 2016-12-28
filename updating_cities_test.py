@@ -25,7 +25,7 @@ def home_rent_ratio(rent_median,home_median):
 
 #minimum number count
 
-overall_filename = 'cities_list2.csv'
+overall_filename = 'cities_list.csv'
 
 craigs_url = line = column = 0
 
