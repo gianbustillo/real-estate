@@ -49,7 +49,7 @@ try:
     today_date_rent =  str(datetime.date.today() - timedelta(days=0))
     datestr = '<time class="result-date" datetime="'+yesterday_date_rent+' '
     before_datestr = '<time class="result-date" datetime="'+before_yesterday_date_rent+' '
-    overall_filename = 'cities_list.csv'
+    overall_filename = 'cities_list2.csv'
 
 
     #as long as there are values in the next row to process
@@ -178,11 +178,10 @@ try:
         not_found = meta.find('href="h')
         if not_found != -1:
             while price_loc != -1:
-                hoa = condo = 0
                 property_url_loc = div.find('js-map-listing-result result-item clearfix js-must-be-removed" href="')
                 property_url_loc_end = div.find('">',property_url_loc)
                 property_url = str(div[property_url_loc+69:property_url_loc_end])
-                print '***************************************************************'
+                print '**********************************'
                 print property_url
                 date_loc = div.find('<b>Sold ')
                 date_loc_end = div.find('</b>',date_loc)
@@ -224,17 +223,17 @@ try:
                         condo_fee_loc = -1
                 if hoa_fee_loc != -1:
                     hoa_fee_loc_end = home_site.find('</p>',hoa_fee_loc)
-
+                    print 'h0a_fee_loc'home_site[hoa_fee_loc+11:hoa_fee_loc+12]
                     if home_site[hoa_fee_loc+11:hoa_fee_loc+12] == '$':
-                        #print home_site[hoa_fee_loc+12:hoa_fee_loc_end-2]
+                        print home_site[hoa_fee_loc+12:hoa_fee_loc_end-2]
                         hoa = float(home_site[hoa_fee_loc+12:hoa_fee_loc_end-2].replace(',',''))
                         print "HOA Fees: " + str(hoa)
                     #since I determine if it's condo fee by using condo fee loc, I set it to hoa fee loc so it's treated as the same
-                        condo_fee_loc = hoa_fee_loc
+
                     else:
                         hoa_fee_loc = -1
                 hoa = hoa + condo
-                print 'Total sum HOA and Condo: ' + str(hoa)
+                print hoa
                 #general
                 #no HOA
                 if bed == '1' and date_record > before_date_home and condo_fee_loc == -1:
