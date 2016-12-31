@@ -43,3 +43,8 @@ Traceback (most recent call last):
   File "rent_craigslist.py", line 51, in <module>
     craigs_url = cities_states[line][column]
 IndexError: list index out of range
+2016-12-31 09:38:06,545 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Henrico state: VA zipcode: 23294 url: http://richmond.craigslist.org/search/apa?s=0&bedrooms=1&query=23294&sort=date bedroom_no: 2 craigs_price: 885
+Traceback (most recent call last):
+  File "rent_craigslist.py", line 51, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
