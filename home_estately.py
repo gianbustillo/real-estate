@@ -39,7 +39,7 @@ try:
     today = datetime.date.today()
     today_a = "'" + str(today) + "'"
     ##dates for home prices
-    before_date_home = datetime.date.today() - timedelta(days=180)
+    before_date_home = datetime.date.today() - timedelta(days=90)
     before_date_home = before_date_home.strftime('%m/%d/%Y')
 
     #dates for rent price
@@ -49,7 +49,7 @@ try:
     today_date_rent =  str(datetime.date.today() - timedelta(days=0))
     datestr = '<time class="result-date" datetime="'+yesterday_date_rent+' '
     before_datestr = '<time class="result-date" datetime="'+before_yesterday_date_rent+' '
-    overall_filename = 'cities_list2.csv'
+    overall_filename = 'cities_list.csv'
 
 
     #as long as there are values in the next row to process
@@ -223,7 +223,7 @@ try:
                         condo_fee_loc = -1
                 if hoa_fee_loc != -1:
                     hoa_fee_loc_end = home_site.find('</p>',hoa_fee_loc)
-                    print 'h0a_fee_loc'home_site[hoa_fee_loc+11:hoa_fee_loc+12]
+                    print 'hoa_fee_loc' + str(home_site[hoa_fee_loc+11:hoa_fee_loc+12])
                     if home_site[hoa_fee_loc+11:hoa_fee_loc+12] == '$':
                         print home_site[hoa_fee_loc+12:hoa_fee_loc_end-2]
                         hoa = float(home_site[hoa_fee_loc+12:hoa_fee_loc_end-2].replace(',',''))

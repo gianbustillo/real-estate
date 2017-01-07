@@ -63,3 +63,18 @@ Traceback (most recent call last):
   File "rent_craigslist.py", line 55, in <module>
     zipcode = cities_states[line][column+4]
 IndexError: list index out of range
+2017-01-04 02:26:26,543 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh: Fairmount city: Richmond state: VA zipcode:  url: http://richmond.craigslist.org/search/apa?s=0&bedrooms=1&query=Fairmount&sort=date bedroom_no: 2 craigs_price: 983
+Traceback (most recent call last):
+  File "rent_craigslist.py", line 55, in <module>
+    zipcode = cities_states[line][column+4]
+IndexError: list index out of range
+2017-01-05 07:14:55,505 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh: Fairmount city: Richmond state: VA zipcode:  url: http://richmond.craigslist.org/search/apa?s=0&bedrooms=1&query=Fairmount&sort=date bedroom_no: 3 craigs_price: 800
+Traceback (most recent call last):
+  File "rent_craigslist.py", line 55, in <module>
+    zipcode = cities_states[line][column+4]
+IndexError: list index out of range
+2017-01-06 02:24:34,479 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh: Fairmount city: Richmond state: VA zipcode:  url: http://richmond.craigslist.org/search/apa?s=0&bedrooms=1&query=Fairmount&sort=date bedroom_no: 2 craigs_price: 979
+Traceback (most recent call last):
+  File "rent_craigslist.py", line 55, in <module>
+    zipcode = cities_states[line][column+4]
+IndexError: list index out of range

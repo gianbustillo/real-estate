@@ -1,0 +1,20 @@
+2017-01-04 01:44:50,085 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh: Fairmount city: Richmond state: VA zipcode:  url: 0 bedroom_no: 0 craigs_price: 0 estate_url: http://www.estately.com/VA/Fairmount,_Richmond/sold?min_bed=1 bed: 3 home_price: 80000.0
+Traceback (most recent call last):
+  File "home_estately.py", line 68, in <module>
+    zipcode = cities_states[line][column+4]
+IndexError: list index out of range
+2017-01-04 03:00:52,740 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "home_estately.py", line 68, in <module>
+    zipcode = cities_states[line][column+4]
+IndexError: list index out of range
+2017-01-05 06:50:43,302 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "home_estately.py", line 68, in <module>
+    zipcode = cities_states[line][column+4]
+IndexError: list index out of range
+2017-01-06 03:00:38,644 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "home_estately.py", line 68, in <module>
+    zipcode = cities_states[line][column+4]
+IndexError: list index out of range
