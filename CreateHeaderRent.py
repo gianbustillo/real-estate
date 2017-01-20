@@ -1,6 +1,6 @@
 import csv
 
-overall_filename = 'new_cities.csv'
+overall_filename = 'cities_list_mia.csv'
 header1 = ['date','rent_1_median','rent_1_count','rent_2_median','rent_2_count','rent_3_median','rent_3_count','rent_4_median','rent_4_count','rent_5_median','rent_5_count','rent_6_median','rent_6_count']
 '''
 header2 = ['home_1_median','home_1_count','home_1_median_hoa','hoa_1_bd_median','home_1_count_hoa','home_1_both_median','home_1_count+home_1_count_hoa','home_2_median','home_2_count','home_2_median_hoa','hoa_2_bd_median','home_2_count_hoa','home_2_both_median','home_2_count+home_2_count_hoa','home_3_median','home_3_count','home_3_median_hoa','hoa_3_bd_median','home_3_count_hoa','home_3_both_median','home_3_count+home_3_count_hoa','home_4_median','home_4_count','home_4_median_hoa']

@@ -37,7 +37,7 @@ try:
     today_date_rent =  str(datetime.date.today() - timedelta(days=0))
     datestr = '<time class="result-date" datetime="'+yesterday_date_rent+' '
     before_datestr = '<time class="result-date" datetime="'+before_yesterday_date_rent+' '
-    overall_filename = 'cities_list.csv'
+    overall_filename = 'cities_list_mia.csv'
 
     #as long as there are values in the next row to process
     while craigs_url != '':

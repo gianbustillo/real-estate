@@ -1,80 +1,97 @@
-2016-12-23 14:05:52,359 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Henrico state: VA zipcode: 23294 url: http://richmond.craigslist.org/search/apa?s=100&bedrooms=1&query=23294&sort=date bedroom_no: 1 craigs_price: 905
+2017-01-08 10:49:31,197 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh: Dupont Park city: Washington state: DC zipcode:  url: http://washingtondc.craigslist.org/search/apa?s=0&bedrooms=1&query=Dupont%20Park&sort=date bedroom_no: 3 craigs_price: 1100
 Traceback (most recent call last):
   File "rent_craigslist.py", line 51, in <module>
     craigs_url = cities_states[line][column]
 IndexError: list index out of range
-2016-12-24 08:20:09,115 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Henrico state: VA zipcode: 23294 url: http://richmond.craigslist.org/search/apa?s=0&bedrooms=1&query=23294&sort=date bedroom_no: 1 craigs_price: 920
+2017-01-09 19:19:07,655 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh: Dupont Park city: Washington state: DC zipcode:  url: http://washingtondc.craigslist.org/search/apa?s=100&bedrooms=1&query=Dupont%20Park&sort=date bedroom_no: 1 craigs_price: 1950
 Traceback (most recent call last):
   File "rent_craigslist.py", line 51, in <module>
     craigs_url = cities_states[line][column]
 IndexError: list index out of range
-2016-12-25 03:00:04,769 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Richmond state: VA zipcode: 23298 url: http://richmond.craigslist.org/search/apa?s=0&bedrooms=1&query=23298&sort=date bedroom_no: 3 craigs_price: 1074
+2017-01-10 19:24:44,865 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh: Dupont Park city: Washington state: DC zipcode:  url: http://washingtondc.craigslist.org/search/apa?s=100&bedrooms=1&query=Dupont%20Park&sort=date bedroom_no: 1 craigs_price: 1669
 Traceback (most recent call last):
   File "rent_craigslist.py", line 51, in <module>
     craigs_url = cities_states[line][column]
 IndexError: list index out of range
-2016-12-26 03:07:00,099 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Henrico state: VA zipcode: 23294 url: http://richmond.craigslist.org/search/apa?s=0&bedrooms=1&query=23294&sort=date bedroom_no: 1 craigs_price: 920
+2017-01-11 22:26:47,621 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh: Carver city: Richmond state: VA zipcode:  url: http://richmond.craigslist.org/search/apa?s=0&bedrooms=1&query=Carver&sort=date bedroom_no: 2 craigs_price: 1000
+Traceback (most recent call last):
+  File "rent_craigslist.py", line 85, in <module>
+    r = requests.get(url)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 462, in request
+    prep = self.prepare_request(req)
+  File "C:\Python27\lib\requests\sessions.py", line 395, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python27\lib\requests\models.py", line 299, in prepare
+    self.prepare_url(url, params)
+  File "C:\Python27\lib\requests\models.py", line 368, in prepare_url
+    raise InvalidURL('URL has an invalid label.')
+InvalidURL: URL has an invalid label.
+2017-01-12 18:11:27,937 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Vienna state: VA zipcode: 22182 url: http://washingtondc.craigslist.org/search/apa?s=0&bedrooms=1&query=22182&sort=date bedroom_no: 5 craigs_price: 2315
 Traceback (most recent call last):
   File "rent_craigslist.py", line 51, in <module>
     craigs_url = cities_states[line][column]
 IndexError: list index out of range
-2016-12-27 03:12:27,420 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Richmond state: VA zipcode: 23298 url: http://richmond.craigslist.org/search/apa?s=0&bedrooms=1&query=23298&sort=date bedroom_no: 4 craigs_price: 1195
+2017-01-13 08:22:35,184 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Vienna state: VA zipcode: 22182 url: http://washingtondc.craigslist.org/search/apa?s=0&bedrooms=1&query=22182&sort=date bedroom_no: 2 craigs_price: 5
 Traceback (most recent call last):
   File "rent_craigslist.py", line 51, in <module>
     craigs_url = cities_states[line][column]
 IndexError: list index out of range
-2016-12-28 03:21:09,525 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Henrico state: VA zipcode: 23294 url: http://richmond.craigslist.org/search/apa?s=0&bedrooms=1&query=23294&sort=date bedroom_no: 2 craigs_price: 1085
+2017-01-13 23:34:28,625 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Washington state: DC zipcode: 20003 url: http://washingtondc.craigslist.org/search/apa?s=100&bedrooms=1&query=20003&sort=date bedroom_no: 2 craigs_price: 3
 Traceback (most recent call last):
   File "rent_craigslist.py", line 51, in <module>
     craigs_url = cities_states[line][column]
 IndexError: list index out of range
-2016-12-28 11:26:45,378 - __main__ - ERROR - 0
+2017-01-14 02:14:00,780 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33167 url: http://miami.craigslist.org/search/apa?s=0&bedrooms=1&query=33167&sort=date bedroom_no: 3 craigs_price: 989
 Traceback (most recent call last):
   File "rent_craigslist.py", line 51, in <module>
     craigs_url = cities_states[line][column]
 IndexError: list index out of range
-2016-12-29 03:05:28,375 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Richmond state: VA zipcode: 23298 url: http://richmond.craigslist.org/search/apa?s=0&bedrooms=1&query=23298&sort=date bedroom_no: 3 craigs_price: 1074
+2017-01-14 04:36:45,194 - __main__ - ERROR - 0
 Traceback (most recent call last):
   File "rent_craigslist.py", line 51, in <module>
     craigs_url = cities_states[line][column]
 IndexError: list index out of range
-2016-12-30 03:01:38,401 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Henrico state: VA zipcode: 23294 url: http://richmond.craigslist.org/search/apa?s=0&bedrooms=1&query=23294&sort=date bedroom_no: 4 craigs_price: 1895
+2017-01-14 10:49:48,286 - __main__ - ERROR - 0
 Traceback (most recent call last):
   File "rent_craigslist.py", line 51, in <module>
     craigs_url = cities_states[line][column]
 IndexError: list index out of range
-2016-12-31 09:38:06,545 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Henrico state: VA zipcode: 23294 url: http://richmond.craigslist.org/search/apa?s=0&bedrooms=1&query=23294&sort=date bedroom_no: 2 craigs_price: 885
+2017-01-14 10:50:09,834 - __main__ - ERROR - 0
 Traceback (most recent call last):
   File "rent_craigslist.py", line 51, in <module>
     craigs_url = cities_states[line][column]
 IndexError: list index out of range
-2017-01-01 15:39:24,164 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh: Forest Hill city: Richmond state: VA zipcode:  url: http://richmond.craigslist.org/search/apa?s=0&bedrooms=1&query=Forest%20Hill&sort=date bedroom_no: 2 craigs_price: 625
+2017-01-15 07:07:10,608 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33127 url: http://miami.craigslist.org/search/apa?s=0&bedrooms=1&query=33127&sort=date bedroom_no: 3 craigs_price: 2200
 Traceback (most recent call last):
-  File "rent_craigslist.py", line 55, in <module>
-    zipcode = cities_states[line][column+4]
+  File "rent_craigslist.py", line 51, in <module>
+    craigs_url = cities_states[line][column]
 IndexError: list index out of range
-2017-01-02 02:22:12,638 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh: Forest Hill city: Richmond state: VA zipcode:  url: http://richmond.craigslist.org/search/apa?s=0&bedrooms=1&query=Forest%20Hill&sort=date bedroom_no: 3 craigs_price: 1250
+2017-01-16 08:46:49,249 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33127 url: http://miami.craigslist.org/search/apa?s=0&bedrooms=1&query=33127&sort=date bedroom_no: 3 craigs_price: 2500
 Traceback (most recent call last):
-  File "rent_craigslist.py", line 55, in <module>
-    zipcode = cities_states[line][column+4]
+  File "rent_craigslist.py", line 51, in <module>
+    craigs_url = cities_states[line][column]
 IndexError: list index out of range
-2017-01-03 02:25:24,138 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh: Fairmount city: Richmond state: VA zipcode:  url: http://richmond.craigslist.org/search/apa?s=0&bedrooms=1&query=Fairmount&sort=date bedroom_no: 2 craigs_price: 960
+2017-01-17 09:14:00,677 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33127 url: http://miami.craigslist.org/search/apa?s=0&bedrooms=1&query=33127&sort=date bedroom_no: 3 craigs_price: 2600
 Traceback (most recent call last):
-  File "rent_craigslist.py", line 55, in <module>
-    zipcode = cities_states[line][column+4]
+  File "rent_craigslist.py", line 51, in <module>
+    craigs_url = cities_states[line][column]
 IndexError: list index out of range
-2017-01-04 02:26:26,543 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh: Fairmount city: Richmond state: VA zipcode:  url: http://richmond.craigslist.org/search/apa?s=0&bedrooms=1&query=Fairmount&sort=date bedroom_no: 2 craigs_price: 983
+2017-01-18 19:35:17,365 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33127 url: http://miami.craigslist.org/search/apa?s=0&bedrooms=1&query=33127&sort=date bedroom_no: 1 craigs_price: 3300
 Traceback (most recent call last):
-  File "rent_craigslist.py", line 55, in <module>
-    zipcode = cities_states[line][column+4]
+  File "rent_craigslist.py", line 51, in <module>
+    craigs_url = cities_states[line][column]
 IndexError: list index out of range
-2017-01-05 07:14:55,505 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh: Fairmount city: Richmond state: VA zipcode:  url: http://richmond.craigslist.org/search/apa?s=0&bedrooms=1&query=Fairmount&sort=date bedroom_no: 3 craigs_price: 800
+2017-01-19 02:15:05,296 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33127 url: http://miami.craigslist.org/search/apa?s=0&bedrooms=1&query=33127&sort=date bedroom_no: 3 craigs_price: 2200
 Traceback (most recent call last):
-  File "rent_craigslist.py", line 55, in <module>
-    zipcode = cities_states[line][column+4]
+  File "rent_craigslist.py", line 51, in <module>
+    craigs_url = cities_states[line][column]
 IndexError: list index out of range
-2017-01-06 02:24:34,479 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh: Fairmount city: Richmond state: VA zipcode:  url: http://richmond.craigslist.org/search/apa?s=0&bedrooms=1&query=Fairmount&sort=date bedroom_no: 2 craigs_price: 979
+2017-01-20 07:08:44,256 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33127 url: http://miami.craigslist.org/search/apa?s=0&bedrooms=1&query=33127&sort=date bedroom_no: 3 craigs_price: 1500
 Traceback (most recent call last):
-  File "rent_craigslist.py", line 55, in <module>
-    zipcode = cities_states[line][column+4]
+  File "rent_craigslist.py", line 51, in <module>
+    craigs_url = cities_states[line][column]
 IndexError: list index out of range

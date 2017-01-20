@@ -49,7 +49,7 @@ try:
     today_date_rent =  str(datetime.date.today() - timedelta(days=0))
     datestr = '<time class="result-date" datetime="'+yesterday_date_rent+' '
     before_datestr = '<time class="result-date" datetime="'+before_yesterday_date_rent+' '
-    overall_filename = 'cities_list.csv'
+    overall_filename = 'cities_list_mia.csv'
 
 
     #as long as there are values in the next row to process
@@ -77,7 +77,9 @@ try:
         #print today_file_format
         #print today_minus_7
         ##if there is today's date already on cities.csv, skip it and go to the next city
-
+        print today_file_format
+        print today_minus_7
+        print HomeStatusLastRun
         if today_file_format > today_minus_7 and HomeStatusLastRun == 'Successful':
             print str(zipcode) + " " + str(neigh) + " " + str(city) + " already completed for the week"
             continue
@@ -120,6 +122,7 @@ try:
         hoa_1_bd, hoa_2_bd, hoa_3_bd, hoa_4_bd, hoa_5_bd, hoa_6_bd =  [], [], [], [], [], []
         hoa_1_bd_median = hoa_2_bd_median = hoa_3_bd_median = hoa_4_bd_median = hoa_5_bd_median = hoa_6_bd_median = 0
 
+        hoa = condo = 0
 
         #house
         #list of homes without hoas, their counts, and median
@@ -860,6 +863,7 @@ except (SystemExit, KeyboardInterrupt):
 except Exception, e:
     logger.error(FORMAT, exc_info=True)
 
+os.system('updating_cities.py')
 
 
 content = 'home_estately.py - COMPLETED'

@@ -1,4 +1,4 @@
-import os
+    import os
 import requests
 from bs4 import BeautifulSoup
 import datetime
@@ -8,7 +8,7 @@ import numpy as np
 import csv
 import logging
 ##SET PARAMETERS##
-minimum = 0
+minimum = 5
 
 def home_rent_diff(rent_median,home_median):
     if rent_median != 0 and home_median != 0:
@@ -25,7 +25,7 @@ def home_rent_ratio(rent_median,home_median):
 
 #minimum number count
 
-overall_filename = 'cities_list.csv'
+overall_filename = 'cities_list_mia.csv'
 
 craigs_url = line = column = 0
 
