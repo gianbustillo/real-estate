@@ -1,0 +1,20 @@
+2017-01-21 08:02:47,423 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33160 url: 0 bedroom_no: 0 craigs_price: 0 estate_url: http://www.estately.com/FL/33160/sold?min_bed=1 bed: 2 home_price: 290000.0
+Traceback (most recent call last):
+  File "home_estately.py", line 208, in <module>
+    b = requests.get(property_url)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 476, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 597, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Python27\lib\requests\adapters.py", line 487, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPConnectionPool(host='www.estately.com', port=80): Max retries exceeded with url: /listings/info/17600-n-bay-rd--23 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x034BF830>: Failed to establish a new connection: [Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',))
+2017-01-22 05:35:33,825 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33127 url: 0 bedroom_no: 0 craigs_price: 0 estate_url: http://www.estately.com/FL/33127/sold?min_bed=1 bed: 2 home_price: 76500.0
+Traceback (most recent call last):
+  File "home_estately.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range

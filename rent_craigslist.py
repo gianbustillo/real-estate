@@ -75,13 +75,19 @@ try:
 
         if zipcode != '':
             url3 = "&bedrooms=1&query=" + str(zipcode) + "&sort=date"
+            url3_th = "&bedrooms=1&query=" + str(zipcode) + "+%22town+house%22+%7C+%22townhouse%22&sort=date"
+            url3_c = "&bedrooms=1&query=" + str(zipcode) + "+%27condo%27+%7C+%27condominium%27&sort=date"
         elif neigh == '':
             url3 = "&bedrooms=1&query=" + str(city.replace(' ','%20')) + "&sort=date"
+            url3_th = "&bedrooms=1&query=" + str(city.replace(' ','%20')) + "+%22town+house%22+%7C+%22townhouse%22&sort=date"
+            url3_c = "&bedrooms=1&query=" + str(city.replace(' ','%20')) + "+%27condo%27+%7C+%27condominium%27&sort=date"
         else:
             url3 = "&bedrooms=1&query=" + str(neigh.replace(' ','%20')) + "&sort=date"
+            url3_th = "&bedrooms=1&query=" + str(neigh.replace(' ','%20')) + "+%22town+house%22+%7C+%22townhouse%22&sort=date"
+            url3_c = "&bedrooms=1&query=" + str(neigh.replace(' ','%20')) + "+%27condo%27+%7C+%27condominium%27&sort=date"
 
         url = "http://" + str(craigs_url) + ".craigslist.org/search/apa?s=" + str(i) + url3
-
+        print url
         r = requests.get(url)
 
         soup = BeautifulSoup(r.content, "html.parser")

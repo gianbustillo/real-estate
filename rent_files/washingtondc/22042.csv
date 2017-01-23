@@ -22,3 +22,4 @@ date,rent_1_median,rent_1_count,rent_2_median,rent_2_count,rent_3_median,rent_3_
 '2017-01-12',1300,4,1622,4,0,0,2487,2,3200,1,0,0
 '2017-01-13',1130,5,1755,5,2200,3,0,0,0,0,0,0
 date,rent_1_median,rent_1_count,rent_2_median,rent_2_count,rent_3_median,rent_3_count,rent_4_median,rent_4_count,rent_5_median,rent_5_count,rent_6_median,rent_6_count
+'2017-01-22',1475,3,1450,5,2350,1,2800,1,0,0,0,0
