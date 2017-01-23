@@ -462,16 +462,6 @@ try:
         rent_5_count_h = rent_5_count - rent_5_count_c - rent_5_count_th
         rent_6_count_h = rent_6_count - rent_6_count_c - rent_6_count_th
 
-        print rent_3_bd
-        print rent_3_count
-        print rent_3_bd_c
-        print rent_3_count_c
-        print rent_3_bd_th
-        print rent_3_count_th
-        print rent_3_bd_h
-        print rent_3_count_h
-
-
         if rent_1_bd != []:
             rent_1_median = int(np.median(rent_1_bd))
         else:
@@ -503,13 +493,107 @@ try:
             rent_6_median = 0
 
 
-        rent_price_count = [rent_1_median, rent_1_count,rent_2_median, rent_2_count, rent_3_median, rent_3_count, rent_4_median, rent_4_count, rent_5_median, rent_5_count, rent_6_median, rent_6_count]
+
+        if rent_1_bd_c != []:
+            rent_1_median_c = int(np.median(rent_1_bd_c))
+        else:
+            rent_1_median_c = 0
+
+        if rent_2_bd_c != []:
+            rent_2_median_c = int(np.median(rent_2_bd_c))
+        else:
+            rent_2_median_c = 0
+
+        if rent_3_bd_c != []:
+            rent_3_median_c = int(np.median(rent_3_bd_c))
+        else:
+            rent_3_median_c = 0
+
+        if rent_4_bd_c != []:
+            rent_4_median_c = int(np.median(rent_4_bd_c))
+        else:
+            rent_4_median_c = 0
+
+        if rent_5_bd_c != []:
+            rent_5_median_c = int(np.median(rent_5_bd_c))
+        else:
+            rent_5_median_c = 0
+
+        if rent_6_bd_c != []:
+            rent_6_median_c = int(np.median(rent_6_bd_c))
+        else:
+            rent_6_median_c = 0
+
+
+        if rent_1_bd_th != []:
+            rent_1_median_th = int(np.median(rent_1_bd_th))
+        else:
+            rent_1_median_th = 0
+
+        if rent_2_bd_th != []:
+            rent_2_median_th = int(np.median(rent_2_bd_th))
+        else:
+            rent_2_median_th = 0
+
+        if rent_3_bd_th != []:
+            rent_3_median_th = int(np.median(rent_3_bd_th))
+        else:
+            rent_3_median_th = 0
+
+        if rent_4_bd_th != []:
+            rent_4_median_th = int(np.median(rent_4_bd_th))
+        else:
+            rent_4_median_th = 0
+
+        if rent_5_bd_th != []:
+            rent_5_median_th = int(np.median(rent_5_bd_th))
+        else:
+            rent_5_median_th = 0
+
+        if rent_6_bd_th != []:
+            rent_6_median_th = int(np.median(rent_6_bd_th))
+        else:
+            rent_6_median_th = 0
+
+
+        if rent_1_bd_h != []:
+            rent_1_median_h = int(np.median(rent_1_bd_h))
+        else:
+            rent_1_median_h = 0
+
+        if rent_2_bd_h != []:
+            rent_2_median_h = int(np.median(rent_2_bd_h))
+        else:
+            rent_2_median_h = 0
+
+        if rent_3_bd_h != []:
+            rent_3_median_h = int(np.median(rent_3_bd_h))
+        else:
+            rent_3_median_h = 0
+
+        if rent_4_bd_h != []:
+            rent_4_median_h = int(np.median(rent_4_bd_h))
+        else:
+            rent_4_median_h = 0
+
+        if rent_5_bd_h != []:
+            rent_5_median_h = int(np.median(rent_5_bd_h))
+        else:
+            rent_5_median_h = 0
+
+        if rent_6_bd_h != []:
+            rent_6_median_h = int(np.median(rent_6_bd_h))
+        else:
+            rent_6_median_h = 0
+
+        rent_price_count = [rent_1_median, rent_1_count,rent_2_median, rent_2_count, rent_3_median, rent_3_count, rent_4_median, rent_4_count, rent_5_median, rent_5_count, rent_6_median, rent_6_count,rent_1_median_c, rent_1_count_c,rent_2_median_c, rent_2_count_c, rent_3_median_c, rent_3_count_c, rent_4_median_c, rent_4_count_c, rent_5_median_c, rent_5_count_c, rent_6_median_c, rent_6_count_c,rent_1_median_h, rent_1_count_h,rent_2_median_h, rent_2_count_h, rent_3_median_h, rent_3_count_h, rent_4_median_h, rent_4_count_h, rent_5_median_h, rent_5_count_h, rent_6_median_h, rent_6_count_h,rent_1_median_th, rent_1_count_th,rent_2_median_th, rent_2_count_th, rent_3_median_th, rent_3_count_th, rent_4_median_th, rent_4_count_th, rent_5_median_th, rent_5_count_th, rent_6_median_th, rent_6_count_th]
+
 
         print rent_price_count
 
         overall_list = [craigs_url,neigh,city,state,zipcode,'Successful',today_a,HomeStatusLastRun,HomeDateLastRun]
         #list saved for individual cities
-        city_rent_list = [today_a,rent_1_median,rent_1_count,rent_2_median,rent_2_count,rent_3_median,rent_3_count,rent_4_median,rent_4_count,rent_5_median,rent_5_count,rent_6_median,rent_6_count]
+        city_rent_list = [today_a,rent_1_median, rent_1_count,rent_2_median, rent_2_count, rent_3_median, rent_3_count, rent_4_median, rent_4_count, rent_5_median, rent_5_count, rent_6_median, rent_6_count,rent_1_median_c, rent_1_count_c,rent_2_median_c, rent_2_count_c, rent_3_median_c, rent_3_count_c, rent_4_median_c, rent_4_count_c, rent_5_median_c, rent_5_count_c, rent_6_median_c, rent_6_count_c,rent_1_median_h, rent_1_count_h,rent_2_median_h, rent_2_count_h, rent_3_median_h, rent_3_count_h, rent_4_median_h, rent_4_count_h, rent_5_median_h, rent_5_count_h, rent_6_median_h, rent_6_count_h,rent_1_median_th, rent_1_count_th,rent_2_median_th, rent_2_count_th, rent_3_median_th, rent_3_count_th, rent_4_median_th, rent_4_count_th, rent_5_median_th, rent_5_count_th, rent_6_median_th, rent_6_count_th]
 
         if zipcode != '':
             folder_and_file = str("rent_files/") + craigs_url + str("/") + zipcode + ".csv"
