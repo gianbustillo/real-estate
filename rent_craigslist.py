@@ -37,7 +37,7 @@ try:
     today_date_rent =  str(datetime.date.today() - timedelta(days=0))
     datestr = '<time class="result-date" datetime="'+yesterday_date_rent+' '
     before_datestr = '<time class="result-date" datetime="'+before_yesterday_date_rent+' '
-    overall_filename = 'cities_list2.csv'
+    overall_filename = 'cities_list.csv'
 
     #as long as there are values in the next row to process
     while craigs_url != '':
@@ -758,10 +758,10 @@ except Exception, e:
 
 #os.system('updating_cities.py')
 
-#content = 'rent_craigslist.py - COMPLETED'
-#mail = smtplib.SMTP('smtp.gmail.com',587)
-#mail.ehlo()
-#mail.starttls()
-#mail.login('onenefautomation@gmail.com','!Password1')
-#mail.sendmail('x','gianbustillo@gmail.com',content)
-#mail.close()
+content = 'rent_craigslist.py - COMPLETED'
+mail = smtplib.SMTP('smtp.gmail.com',587)
+mail.ehlo()
+mail.starttls()
+mail.login('onenefautomation@gmail.com','!Password1')
+mail.sendmail('x','gianbustillo@gmail.com',content)
+mail.close()
