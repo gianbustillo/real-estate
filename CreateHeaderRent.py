@@ -1,8 +1,14 @@
 import csv
 
-overall_filename = 'cities_list_mia.csv'
-header1 = ['date','rent_1_median','rent_1_count','rent_2_median','rent_2_count','rent_3_median','rent_3_count','rent_4_median','rent_4_count','rent_5_median','rent_5_count','rent_6_median','rent_6_count']
+overall_filename = 'cities_list.csv'
+header1 = ['data', 'rent_1_median', 'rent_1_count','rent_2_median', 'rent_2_count', 'rent_3_median', 'rent_3_count', 'rent_4_median', 'rent_4_count', 'rent_5_median', 'rent_5_count', 'rent_6_median', 'rent_6_count','rent_1_median_c', 'rent_1_count_c','rent_2_median_c', 'rent_2_count_c', 'rent_3_median_c', 'rent_3_count_c', 'rent_4_median_c']
+header2 = ['rent_4_count_c', 'rent_5_median_c', 'rent_5_count_c', 'rent_6_median_c', 'rent_6_count_c','rent_1_median_h', 'rent_1_count_h','rent_2_median_h', 'rent_2_count_h', 'rent_3_median_h', 'rent_3_count_h']
+header3 = ['rent_4_median_h', 'rent_4_count_h', 'rent_5_median_h', 'rent_5_count_h', 'rent_6_median_h', 'rent_6_count_h','rent_1_median_th', 'rent_1_count_th','rent_2_median_th', 'rent_2_count_th', 'rent_3_median_th', 'rent_3_count_th', 'rent_4_median_th', 'rent_4_count_th', 'rent_5_median_th', 'rent_5_count_th', 'rent_6_median_th', 'rent_6_count_th']
+
+
+
 '''
+'date','rent_1_median','rent_1_count','rent_2_median','rent_2_count','rent_3_median','rent_3_count','rent_4_median','rent_4_count','rent_5_median','rent_5_count','rent_6_median','rent_6_count'
 header2 = ['home_1_median','home_1_count','home_1_median_hoa','hoa_1_bd_median','home_1_count_hoa','home_1_both_median','home_1_count+home_1_count_hoa','home_2_median','home_2_count','home_2_median_hoa','hoa_2_bd_median','home_2_count_hoa','home_2_both_median','home_2_count+home_2_count_hoa','home_3_median','home_3_count','home_3_median_hoa','hoa_3_bd_median','home_3_count_hoa','home_3_both_median','home_3_count+home_3_count_hoa','home_4_median','home_4_count','home_4_median_hoa']
 header3 = ['hoa_4_bd_median','home_4_count_hoa','home_4_both_median','home_4_count+home_4_count_hoa','home_5_median','home_5_count','home_5_median_hoa','hoa_5_bd_median','home_5_count_hoa','home_5_both_median','home_5_count+home_5_count_hoa','home_6_median','home_6_count','home_6_median_hoa','hoa_6_bd_median','home_6_count_hoa','home_6_both_median','home_6_count+home_6_count_hoa']
 header4 = ['home_1_median','home_1_count','home_1_median_hoa','hoa_1_bd_median','home_1_count_hoa','home_1_both_median','home_1_count+home_1_count_hoa','home_2_median','home_2_count','home_2_median_hoa','hoa_2_bd_median','home_2_count_hoa','home_2_both_median','home_2_count+home_2_count_hoa','home_3_median','home_3_count','home_3_median_hoa','hoa_3_bd_median','home_3_count_hoa','home_3_both_median','home_3_count+home_3_count_hoa','home_4_median','home_4_count','home_4_median_hoa']
@@ -14,7 +20,7 @@ header9 = ['hoa_4_bd_median_house','home_4_count_hoa_house','home_4_both_median_
 header10 = ['home_1_median_th','home_1_count_th','home_1_median_hoa_th','hoa_1_bd_median_th','home_1_count_hoa_th','home_1_both_median_th','home_1_count_th+home_1_count_hoa_th','home_2_median_th','home_2_count_th','home_2_median_hoa_th','hoa_2_bd_median_th','home_2_count_hoa_th','home_2_both_median_th','home_2_count_th+home_2_count_hoa_th','home_3_median_th','home_3_count_th','home_3_median_hoa_th','hoa_3_bd_median_th','home_3_count_hoa_th','home_3_both_median_th','home_3_count_th+home_3_count_hoa_th','home_4_median_th','home_4_count_th','home_4_median_hoa_th']
 header11 = ['hoa_4_bd_median_th','home_4_count_hoa_th','home_4_both_median_th','home_4_count_th+home_4_count_hoa_th','home_5_median_th','home_5_count_th','home_5_median_hoa_th','hoa_5_bd_median_th','home_5_count_hoa_th','home_5_both_median_th','home_5_count_th+home_5_count_hoa_th','home_6_median_th','home_6_count_th','home_6_median_hoa_th','hoa_6_bd_median_th','home_6_count_hoa_th','home_6_both_median_th','home_6_count_th+home_6_count_hoa_th']
 '''
-header100 = header1
+header100 = header1 + header2 + header3
 #+ header2 + header3 + header4 + header5 + header6 + header7 + header8 + header9 + header10 + header11
 print header100
 csv_list = []

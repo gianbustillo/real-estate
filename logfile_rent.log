@@ -1,0 +1,5 @@
+2017-01-23 23:41:37,167 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Woodbridge state: VA zipcode: 22193 url: http://washingtondc.craigslist.org/search/apa?s=0&bedrooms=1&query=22193&sort=date bedroom_no: 3 craigs_price: 1700
+Traceback (most recent call last):
+  File "rent_craigslist.py", line 51, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range

@@ -49,7 +49,7 @@ try:
     today_date_rent =  str(datetime.date.today() - timedelta(days=0))
     datestr = '<time class="result-date" datetime="'+yesterday_date_rent+' '
     before_datestr = '<time class="result-date" datetime="'+before_yesterday_date_rent+' '
-    overall_filename = 'cities_list_mia.csv'
+    overall_filename = 'cities_list.csv'
 
 
     #as long as there are values in the next row to process
@@ -863,7 +863,7 @@ except (SystemExit, KeyboardInterrupt):
 except Exception, e:
     logger.error(FORMAT, exc_info=True)
 
-os.system('updating_cities.py')
+#os.system('updating_cities.py')
 
 
 content = 'home_estately.py - COMPLETED'

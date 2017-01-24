@@ -9,11 +9,13 @@ import logging
 import os
 import smtplib
 
-set([1,2,6,8]) - set([2,3,5,8])
 
-a = [1,2,3,4]
+#set([1,2,6,8]) - set([2,3,5,8])
+a = {1,2,3,4}
 print a
-b = [3,4,5]
+b = {2,3,4}
 print b
+d = a - b
+print d
 c = set(a) - set(b)
 print c
