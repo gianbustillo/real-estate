@@ -25,7 +25,7 @@ def home_rent_ratio(rent_median,home_median):
 
 #minimum number count
 
-overall_filename = 'cities_list_mia.csv'
+overall_filename = 'cities_list.csv'
 
 craigs_url = line = column = 0
 
@@ -74,6 +74,10 @@ while craigs_url != '':
 
 
         one_bed_rent_list, two_bed_rent_list, three_bed_rent_list, four_bed_rent_list, five_bed_rent_list, six_bed_rent_list = [],[],[],[],[],[]
+        one_bed_rent_list_c, two_bed_rent_list_c, three_bed_rent_list_c, four_bed_rent_list_c, five_bed_rent_list_c, six_bed_rent_list_c = [],[],[],[],[],[]
+        one_bed_rent_list_h, two_bed_rent_list_h, three_bed_rent_list_h, four_bed_rent_list_h, five_bed_rent_list_h, six_bed_rent_list_h = [],[],[],[],[],[]
+        one_bed_rent_list_th, two_bed_rent_list_th, three_bed_rent_list_th, four_bed_rent_list_th, five_bed_rent_list_th, six_bed_rent_list_th = [],[],[],[],[],[]
+
         one_bed_home_list, two_bed_home_list, three_bed_home_list, four_bed_home_list, five_bed_home_list, six_bed_home_list = [],[],[],[],[],[]
         one_bed_home_list_c, two_bed_home_list_c, three_bed_home_list_c, four_bed_home_list_c, five_bed_home_list_c, six_bed_home_list_c = [],[],[],[],[],[]
         one_bed_home_list_h, two_bed_home_list_h, three_bed_home_list_h, four_bed_home_list_h, five_bed_home_list_h, six_bed_home_list_h = [],[],[],[],[],[]
@@ -111,6 +115,46 @@ while craigs_url != '':
                     five_bed_rent_list.append(int(group_rent[line_neigh_city_rent][column_rent+9]))
                 if int(group_rent[line_neigh_city_rent][column_rent+12]) >= int(minimum):
                     six_bed_rent_list.append(int(group_rent[line_neigh_city_rent][column_rent+11]))
+
+                if int(group_rent[line_neigh_city_rent][column_rent+14]) >= int(minimum):
+                    one_bed_rent_list_c.append(int(group_rent[line_neigh_city_rent][column_rent+13]))
+                if int(group_rent[line_neigh_city_rent][column_rent+16]) >= int(minimum):
+                    two_bed_rent_list_c.append(int(group_rent[line_neigh_city_rent][column_rent+15]))
+                if int(group_rent[line_neigh_city_rent][column_rent+18]) >= int(minimum):
+                    three_bed_rent_list_c.append(int(group_rent[line_neigh_city_rent][column_rent+17]))
+                if int(group_rent[line_neigh_city_rent][column_rent+20]) >= int(minimum):
+                    four_bed_rent_list_c.append(int(group_rent[line_neigh_city_rent][column_rent+19]))
+                if int(group_rent[line_neigh_city_rent][column_rent+22]) >= int(minimum):
+                    five_bed_rent_list_c.append(int(group_rent[line_neigh_city_rent][column_rent+21]))
+                if int(group_rent[line_neigh_city_rent][column_rent+24]) >= int(minimum):
+                    six_bed_rent_list_c.append(int(group_rent[line_neigh_city_rent][column_rent+23]))
+
+                if int(group_rent[line_neigh_hity_rent][column_rent+26]) >= int(minimum):
+                    one_bed_rent_list_h.append(int(group_rent[line_neigh_city_rent][column_rent+25]))
+                if int(group_rent[line_neigh_city_rent][column_rent+28]) >= int(minimum):
+                    two_bed_rent_list_h.append(int(group_rent[line_neigh_city_rent][column_rent+27]))
+                if int(group_rent[line_neigh_city_rent][column_rent+30]) >= int(minimum):
+                    three_bed_rent_list_h.append(int(group_rent[line_neigh_city_rent][column_rent+29]))
+                if int(group_rent[line_neigh_city_rent][column_rent+32]) >= int(minimum):
+                    four_bed_rent_list_h.append(int(group_rent[line_neigh_city_rent][column_rent+31]))
+                if int(group_rent[line_neigh_city_rent][column_rent+34]) >= int(minimum):
+                    five_bed_rent_list_h.append(int(group_rent[line_neigh_city_rent][column_rent+33]))
+                if int(group_rent[line_neigh_city_rent][column_rent+36]) >= int(minimum):
+                    six_bed_rent_list_h.append(int(group_rent[line_neigh_city_rent][column_rent+35]))
+
+                if int(group_rent[line_neigh_hity_rent][column_rent+38]) >= int(minimum):
+                    one_bed_rent_list_th.append(int(group_rent[line_neigh_city_rent][column_rent+37]))
+                if int(group_rent[line_neigh_city_rent][column_rent+40]) >= int(minimum):
+                    two_bed_rent_list_th.append(int(group_rent[line_neigh_city_rent][column_rent+39]))
+                if int(group_rent[line_neigh_city_rent][column_rent+42]) >= int(minimum):
+                    three_bed_rent_list_th.append(int(group_rent[line_neigh_city_rent][column_rent+41]))
+                if int(group_rent[line_neigh_city_rent][column_rent+44]) >= int(minimum):
+                    four_bed_rent_list_th.append(int(group_rent[line_neigh_city_rent][column_rent+43]))
+                if int(group_rent[line_neigh_city_rent][column_rent+46]) >= int(minimum):
+                    five_bed_rent_list_th.append(int(group_rent[line_neigh_city_rent][column_rent+45]))
+                if int(group_rent[line_neigh_city_rent][column_rent+48]) >= int(minimum):
+                    six_bed_rent_list_th.append(int(group_rent[line_neigh_city_rent][column_rent+47]))
+
 
 
                 date_home = group_home[line_neigh_city_home][column_home]
@@ -195,6 +239,82 @@ while craigs_url != '':
         else:
             rent_6_median = 0
 
+        if one_bed_rent_list_h != []:
+            rent_1_median_h = int(np.median(one_bed_rent_list_h))
+        else:
+            rent_1_median_h = 0
+        if two_bed_rent_list_h != []:
+            rent_2_median_h = int(np.median(two_bed_rent_list_h))
+        else:
+            rent_2_median_h = 0
+        if three_bed_rent_list_h != []:
+            rent_3_median_h = int(np.median(three_bed_rent_list_h))
+        else:
+            rent_3_median_h = 0
+        if four_bed_rent_list_h != []:
+            rent_4_median_h = int(np.median(four_bed_rent_list_h))
+        else:
+            rent_4_median_h = 0
+        if five_bed_rent_list_h != []:
+            rent_5_median_h = int(np.median(five_bed_rent_list_h))
+        else:
+            rent_5_median_h = 0
+        if six_bed_rent_list_h != []:
+            rent_6_median_h = int(np.median(six_bed_rent_list_h))
+        else:
+            rent_6_median_h = 0
+
+        if one_bed_rent_list_th != []:
+            rent_1_median_th = int(np.median(one_bed_rent_list_th))
+        else:
+            rent_1_median_th = 0
+        if two_bed_rent_list_th != []:
+            rent_2_median_th = int(np.median(two_bed_rent_list_th))
+        else:
+            rent_2_median_th = 0
+        if three_bed_rent_list_th != []:
+            rent_3_median_th = int(np.median(three_bed_rent_list_th))
+        else:
+            rent_3_median_th = 0
+        if four_bed_rent_list_th != []:
+            rent_4_median_th = int(np.median(four_bed_rent_list_th))
+        else:
+            rent_4_median_th = 0
+        if five_bed_rent_list_th != []:
+            rent_5_median_th = int(np.median(five_bed_rent_list_th))
+        else:
+            rent_5_median_th = 0
+        if six_bed_rent_list_th != []:
+            rent_6_median_th = int(np.median(six_bed_rent_list_th))
+        else:
+            rent_6_median_th = 0
+
+        if one_bed_rent_list_c != []:
+            rent_1_median_c = int(np.median(one_bed_rent_list_c))
+        else:
+            rent_1_median_c = 0
+        if two_bed_rent_list_c != []:
+            rent_2_median_c = int(np.median(two_bed_rent_list_c))
+        else:
+            rent_2_median_c = 0
+        if three_bed_rent_list_c != []:
+            rent_3_median_c = int(np.median(three_bed_rent_list_c))
+        else:
+            rent_3_median_c = 0
+        if four_bed_rent_list_c != []:
+            rent_4_median_c = int(np.median(four_bed_rent_list_c))
+        else:
+            rent_4_median_c = 0
+        if five_bed_rent_list_c != []:
+            rent_5_median_c = int(np.median(five_bed_rent_list_c))
+        else:
+            rent_5_median_c = 0
+        if six_bed_rent_list_c != []:
+            rent_6_median_c = int(np.median(six_bed_rent_list_c))
+        else:
+            rent_6_median_c = 0
+
+
         if one_bed_home_list != []:
             home_1_median = float(np.median(one_bed_home_list))
         else:
@@ -271,30 +391,30 @@ while craigs_url != '':
         else:
             home_6_median_h = 0
 
-        if one_bed_home_list_th != []:
-            home_1_median_th = float(np.median(one_bed_home_list_th))
+        if one_bed_home_list_c != []:
+            home_1_median_c = float(np.median(one_bed_home_list_c))
         else:
-            home_1_median_th = 0
-        if two_bed_home_list_th != []:
-            home_2_median_th = float(np.median(two_bed_home_list_th))
+            home_1_median_c = 0
+        if two_bed_home_list_c != []:
+            home_2_median_c = float(np.median(two_bed_home_list_c))
         else:
-            home_2_median_th = 0
-        if three_bed_home_list_th != []:
-            home_3_median_th = float(np.median(three_bed_home_list_th))
+            home_2_median_c = 0
+        if three_bed_home_list_c != []:
+            home_3_median_c = float(np.median(three_bed_home_list_c))
         else:
-            home_3_median_th = 0
-        if four_bed_home_list_th != []:
-            home_4_median_th = float(np.median(four_bed_home_list_th))
+            home_3_median_c = 0
+        if four_bed_home_list_c != []:
+            home_4_median_c = float(np.median(four_bed_home_list_c))
         else:
-            home_4_median_th = 0
-        if five_bed_home_list_th != []:
-            home_5_median_th = float(np.median(five_bed_home_list_th))
+            home_4_median_c = 0
+        if five_bed_home_list_c != []:
+            home_5_median_c = float(np.median(five_bed_home_list_c))
         else:
-            home_5_median_th = 0
-        if six_bed_home_list_th != []:
-            home_6_median_th = float(np.median(six_bed_home_list_th))
+            home_5_median_c = 0
+        if six_bed_home_list_c != []:
+            home_6_median_c = float(np.median(six_bed_home_list_c))
         else:
-            home_6_median_th = 0
+            home_6_median_c = 0
         '''
         print str(rent_1_median) + ' rent_1_median'
         print str(rent_2_median) + ' rent_2_median'
@@ -331,7 +451,6 @@ while craigs_url != '':
         print str(home_5_median_th) + ' home_5_median_th'
         print str(home_6_median_th) + ' home_6_median_th'
         '''
-        diff_1_bed = rat_1_bed = diff_1_bed_c = rat_1_bed_c = diff_1_bed_h = rat_1_bed_h = diff_1_bed_th = rat_1_bed_th = 0
 
 
 
@@ -348,45 +467,45 @@ while craigs_url != '':
         rat_6_bed = home_rent_ratio(rent_6_median,home_6_median)
         diff_6_bed = home_rent_diff(rent_6_median,home_6_median)
 
-        rat_1_bed_c = home_rent_ratio(rent_1_median,home_1_median_c)
-        diff_1_bed_c = home_rent_diff(rent_1_median,home_1_median_c)
-        rat_2_bed_c = home_rent_ratio(rent_2_median,home_2_median_c)
-        diff_2_bed_c = home_rent_diff(rent_2_median,home_2_median_c)
-        rat_3_bed_c = home_rent_ratio(rent_3_median,home_3_median_c)
-        diff_3_bed_c = home_rent_diff(rent_3_median,home_3_median_c)
-        rat_4_bed_c = home_rent_ratio(rent_4_median,home_4_median_c)
-        diff_4_bed_c = home_rent_diff(rent_4_median,home_4_median_c)
-        rat_5_bed_c = home_rent_ratio(rent_5_median,home_5_median_c)
-        diff_5_bed_c = home_rent_diff(rent_5_median,home_5_median_c)
-        rat_6_bed_c = home_rent_ratio(rent_6_median,home_6_median_c)
-        diff_6_bed_c = home_rent_diff(rent_6_median,home_6_median_c)
+        rat_1_bed_c = home_rent_ratio(rent_1_median_c,home_1_median_c)
+        diff_1_bed_c = home_rent_diff(rent_1_median_c,home_1_median_c)
+        rat_2_bed_c = home_rent_ratio(rent_2_median_c,home_2_median_c)
+        diff_2_bed_c = home_rent_diff(rent_2_median_c,home_2_median_c)
+        rat_3_bed_c = home_rent_ratio(rent_3_median_c,home_3_median_c)
+        diff_3_bed_c = home_rent_diff(rent_3_median_c,home_3_median_c)
+        rat_4_bed_c = home_rent_ratio(rent_4_median_c,home_4_median_c)
+        diff_4_bed_c = home_rent_diff(rent_4_median_c,home_4_median_c)
+        rat_5_bed_c = home_rent_ratio(rent_5_median_c,home_5_median_c)
+        diff_5_bed_c = home_rent_diff(rent_5_median_c,home_5_median_c)
+        rat_6_bed_c = home_rent_ratio(rent_6_median_c,home_6_median_c)
+        diff_6_bed_c = home_rent_diff(rent_6_median_c,home_6_median_c)
 
 
-        rat_1_bed_h = home_rent_ratio(rent_1_median,home_1_median_h)
-        diff_1_bed_h = home_rent_diff(rent_1_median,home_1_median_h)
-        rat_2_bed_h = home_rent_ratio(rent_2_median,home_2_median_h)
-        diff_2_bed_h = home_rent_diff(rent_2_median,home_2_median_h)
-        rat_3_bed_h = home_rent_ratio(rent_3_median,home_3_median_h)
-        diff_3_bed_h = home_rent_diff(rent_3_median,home_3_median_h)
-        rat_4_bed_h = home_rent_ratio(rent_4_median,home_4_median_h)
-        diff_4_bed_h = home_rent_diff(rent_4_median,home_4_median_h)
-        rat_5_bed_h = home_rent_ratio(rent_5_median,home_5_median_h)
-        diff_5_bed_h = home_rent_diff(rent_5_median,home_5_median_h)
-        rat_6_bed_h = home_rent_ratio(rent_6_median,home_6_median_h)
-        diff_6_bed_h = home_rent_diff(rent_6_median,home_6_median_h)
+        rat_1_bed_h = home_rent_ratio(rent_1_median_h,home_1_median_h)
+        diff_1_bed_h = home_rent_diff(rent_1_median_h,home_1_median_h)
+        rat_2_bed_h = home_rent_ratio(rent_2_median_h,home_2_median_h)
+        diff_2_bed_h = home_rent_diff(rent_2_median_h,home_2_median_h)
+        rat_3_bed_h = home_rent_ratio(rent_3_median_h,home_3_median_h)
+        diff_3_bed_h = home_rent_diff(rent_3_median_h,home_3_median_h)
+        rat_4_bed_h = home_rent_ratio(rent_4_median_h,home_4_median_h)
+        diff_4_bed_h = home_rent_diff(rent_4_median_h,home_4_median_h)
+        rat_5_bed_h = home_rent_ratio(rent_5_median_h,home_5_median_h)
+        diff_5_bed_h = home_rent_diff(rent_5_median_h,home_5_median_h)
+        rat_6_bed_h = home_rent_ratio(rent_6_median_h,home_6_median_h)
+        diff_6_bed_h = home_rent_diff(rent_6_median_h,home_6_median_h)
 
-        rat_1_bed_th = home_rent_ratio(rent_1_median,home_1_median_th)
-        diff_1_bed_th = home_rent_diff(rent_1_median,home_1_median_th)
-        rat_2_bed_th = home_rent_ratio(rent_2_median,home_2_median_th)
-        diff_2_bed_th = home_rent_diff(rent_2_median,home_2_median_th)
-        rat_3_bed_th = home_rent_ratio(rent_3_median,home_3_median_th)
-        diff_3_bed_th = home_rent_diff(rent_3_median,home_3_median_th)
-        rat_4_bed_th = home_rent_ratio(rent_4_median,home_4_median_th)
-        diff_4_bed_th = home_rent_diff(rent_4_median,home_4_median_th)
-        rat_5_bed_th = home_rent_ratio(rent_5_median,home_5_median_th)
-        diff_5_bed_th = home_rent_diff(rent_5_median,home_5_median_th)
-        rat_6_bed_th = home_rent_ratio(rent_6_median,home_6_median_th)
-        diff_6_bed_th = home_rent_diff(rent_6_median,home_6_median_th)
+        rat_1_bed_th = home_rent_ratio(rent_1_median_th,home_1_median_th)
+        diff_1_bed_th = home_rent_diff(rent_1_median_th,home_1_median_th)
+        rat_2_bed_th = home_rent_ratio(rent_2_median_th,home_2_median_th)
+        diff_2_bed_th = home_rent_diff(rent_2_median_th,home_2_median_th)
+        rat_3_bed_th = home_rent_ratio(rent_3_median_th,home_3_median_th)
+        diff_3_bed_th = home_rent_diff(rent_3_median_th,home_3_median_th)
+        rat_4_bed_th = home_rent_ratio(rent_4_median_th,home_4_median_th)
+        diff_4_bed_th = home_rent_diff(rent_4_median_th,home_4_median_th)
+        rat_5_bed_th = home_rent_ratio(rent_5_median_th,home_5_median_th)
+        diff_5_bed_th = home_rent_diff(rent_5_median_th,home_5_median_th)
+        rat_6_bed_th = home_rent_ratio(rent_6_median_th,home_6_median_th)
+        diff_6_bed_th = home_rent_diff(rent_6_median_th,home_6_median_th)
 
         overall_list = [craigs_url,neigh,city,state,zipcode,RentStatusLastRun,RentDateLastRun,HomeStatusLastRun,HomeDateLastRun,'||',today_a,rat_1_bed,diff_1_bed,rat_2_bed,diff_2_bed,rat_3_bed,diff_3_bed,rat_4_bed,diff_4_bed,rat_5_bed,diff_5_bed,rat_6_bed,diff_6_bed,rat_1_bed_c,diff_1_bed_c,rat_2_bed_c,diff_2_bed_c,rat_3_bed_c,diff_3_bed_c,rat_4_bed_c,diff_4_bed_c,rat_5_bed_c,diff_5_bed_c,rat_6_bed_c,diff_6_bed_c,rat_1_bed_h,diff_1_bed_h,rat_2_bed_h,diff_2_bed_h,rat_3_bed_h,diff_3_bed_h,rat_4_bed_h,diff_4_bed_h,rat_5_bed_h,diff_5_bed_h,rat_6_bed_h,diff_6_bed_h,rat_1_bed_th,diff_1_bed_th,rat_2_bed_th,diff_2_bed_th,rat_3_bed_th,diff_3_bed_th,rat_4_bed_th,diff_4_bed_th,rat_5_bed_th,diff_5_bed_th,rat_6_bed_th,diff_6_bed_th]
 

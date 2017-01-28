@@ -863,7 +863,7 @@ except (SystemExit, KeyboardInterrupt):
 except Exception, e:
     logger.error(FORMAT, exc_info=True)
 
-#os.system('updating_cities.py')
+os.system('updating_cities.py')
 
 
 content = 'home_estately.py - COMPLETED'

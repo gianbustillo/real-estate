@@ -1,5 +1,0 @@
-2017-01-24 07:30:47,769 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: College Park state: MD zipcode: 20740 url: 0 bedroom_no: 0 craigs_price: 0 estate_url: http://www.estately.com/MD/20740/sold?min_bed=1 bed: 2 home_price: 155000.0
-Traceback (most recent call last):
-  File "home_estately.py", line 64, in <module>
-    craigs_url = cities_states[line][column]
-IndexError: list index out of range
