@@ -1,4 +1,4 @@
-    import os
+import os
 import requests
 from bs4 import BeautifulSoup
 import datetime
@@ -156,8 +156,6 @@ while craigs_url != '':
                     six_bed_rent_list_th.append(int(group_rent[line_neigh_city_rent][column_rent+47]))
 
 
-
-                date_home = group_home[line_neigh_city_home][column_home]
                 if int(group_home[line_neigh_city_home][column_home+7]) >= int(minimum):
                     one_bed_home_list.append(int(group_home[line_neigh_city_home][column_home+6]))
                 if int(group_home[line_neigh_city_home][column_home+14]) >= int(minimum):
@@ -391,30 +389,30 @@ while craigs_url != '':
         else:
             home_6_median_h = 0
 
-        if one_bed_home_list_c != []:
-            home_1_median_c = float(np.median(one_bed_home_list_c))
+        if one_bed_home_list_th != []:
+            home_1_median_th = float(np.median(one_bed_home_list_th))
         else:
-            home_1_median_c = 0
-        if two_bed_home_list_c != []:
-            home_2_median_c = float(np.median(two_bed_home_list_c))
+            home_1_median_th = 0
+        if two_bed_home_list_th != []:
+            home_2_median_th = float(np.median(two_bed_home_list_th))
         else:
-            home_2_median_c = 0
-        if three_bed_home_list_c != []:
-            home_3_median_c = float(np.median(three_bed_home_list_c))
+            home_2_median_th = 0
+        if three_bed_home_list_th != []:
+            home_3_median_th = float(np.median(three_bed_home_list_th))
         else:
-            home_3_median_c = 0
-        if four_bed_home_list_c != []:
-            home_4_median_c = float(np.median(four_bed_home_list_c))
+            home_3_median_th = 0
+        if four_bed_home_list_th != []:
+            home_4_median_th = float(np.median(four_bed_home_list_th))
         else:
-            home_4_median_c = 0
-        if five_bed_home_list_c != []:
-            home_5_median_c = float(np.median(five_bed_home_list_c))
+            home_4_median_th = 0
+        if five_bed_home_list_th != []:
+            home_5_median_th = float(np.median(five_bed_home_list_th))
         else:
-            home_5_median_c = 0
-        if six_bed_home_list_c != []:
-            home_6_median_c = float(np.median(six_bed_home_list_c))
+            home_5_median_th = 0
+        if six_bed_home_list_th != []:
+            home_6_median_th = float(np.median(six_bed_home_list_th))
         else:
-            home_6_median_c = 0
+            home_6_median_th = 0
         '''
         print str(rent_1_median) + ' rent_1_median'
         print str(rent_2_median) + ' rent_2_median'
