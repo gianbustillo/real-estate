@@ -8,7 +8,7 @@ import numpy as np
 import csv
 import logging
 ##SET PARAMETERS##
-minimum = 5
+minimum = 0
 
 def home_rent_diff(rent_median,home_median):
     if rent_median != 0 and home_median != 0:
@@ -116,6 +116,7 @@ while craigs_url != '':
                 if int(group_rent[line_neigh_city_rent][column_rent+12]) >= int(minimum):
                     six_bed_rent_list.append(int(group_rent[line_neigh_city_rent][column_rent+11]))
 
+
                 if int(group_rent[line_neigh_city_rent][column_rent+14]) >= int(minimum):
                     one_bed_rent_list_c.append(int(group_rent[line_neigh_city_rent][column_rent+13]))
                 if int(group_rent[line_neigh_city_rent][column_rent+16]) >= int(minimum):
@@ -129,8 +130,10 @@ while craigs_url != '':
                 if int(group_rent[line_neigh_city_rent][column_rent+24]) >= int(minimum):
                     six_bed_rent_list_c.append(int(group_rent[line_neigh_city_rent][column_rent+23]))
 
-                if int(group_rent[line_neigh_hity_rent][column_rent+26]) >= int(minimum):
+
+                if int(group_rent[line_neigh_city_rent][column_rent+26]) >= int(minimum):
                     one_bed_rent_list_h.append(int(group_rent[line_neigh_city_rent][column_rent+25]))
+
                 if int(group_rent[line_neigh_city_rent][column_rent+28]) >= int(minimum):
                     two_bed_rent_list_h.append(int(group_rent[line_neigh_city_rent][column_rent+27]))
                 if int(group_rent[line_neigh_city_rent][column_rent+30]) >= int(minimum):
@@ -142,7 +145,8 @@ while craigs_url != '':
                 if int(group_rent[line_neigh_city_rent][column_rent+36]) >= int(minimum):
                     six_bed_rent_list_h.append(int(group_rent[line_neigh_city_rent][column_rent+35]))
 
-                if int(group_rent[line_neigh_hity_rent][column_rent+38]) >= int(minimum):
+
+                if int(group_rent[line_neigh_city_rent][column_rent+38]) >= int(minimum):
                     one_bed_rent_list_th.append(int(group_rent[line_neigh_city_rent][column_rent+37]))
                 if int(group_rent[line_neigh_city_rent][column_rent+40]) >= int(minimum):
                     two_bed_rent_list_th.append(int(group_rent[line_neigh_city_rent][column_rent+39]))
@@ -169,6 +173,9 @@ while craigs_url != '':
                 if int(group_home[line_neigh_city_home][column_home+42]) >= int(minimum):
                     six_bed_home_list.append(int(group_home[line_neigh_city_home][column_home+41]))
 
+                print one_bed_home_list
+
+                print two_bed_home_list
                 if int(group_home[line_neigh_city_home][column_home+49]) >= int(minimum):
                     one_bed_home_list_c.append(int(group_home[line_neigh_city_home][column_home+48]))
                 if int(group_home[line_neigh_city_home][column_home+56]) >= int(minimum):
