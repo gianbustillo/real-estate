@@ -1,6 +1,6 @@
 import csv
 
-overall_filename = 'new_cities.csv'
+overall_filename = 'cities_list.csv'
 header1 = ['date']
 header4 = ['home_1_median','home_1_count','home_1_median_hoa','hoa_1_bd_median','home_1_count_hoa','home_1_both_median','home_1_count+home_1_count_hoa','home_2_median','home_2_count','home_2_median_hoa','hoa_2_bd_median','home_2_count_hoa','home_2_both_median','home_2_count+home_2_count_hoa','home_3_median','home_3_count','home_3_median_hoa','hoa_3_bd_median','home_3_count_hoa','home_3_both_median','home_3_count+home_3_count_hoa','home_4_median','home_4_count','home_4_median_hoa']
 header5 = ['hoa_4_bd_median','home_4_count_hoa','home_4_both_median','home_4_count+home_4_count_hoa','home_5_median','home_5_count','home_5_median_hoa','hoa_5_bd_median','home_5_count_hoa','home_5_both_median','home_5_count+home_5_count_hoa','home_6_median','home_6_count','home_6_median_hoa','hoa_6_bd_median','home_6_count_hoa','home_6_both_median','home_6_count+home_6_count_hoa']
@@ -27,9 +27,12 @@ while True:
     neigh = cities_states[line][column+1]
     city = cities_states[line][column+2]
     state = cities_states[line][column+3]
-    today_file = cities_states[line][column+4]
+    zipcode = cities_states[line][column+4]
+    today_file = cities_states[line][column+5]
 
-    if neigh != '':
+    if zipcode != '':
+        folder_and_file = str("home_files/") + craigs_url + str("/") + zipcode + ".csv"
+    elif neigh != '':
         folder_and_file = str("home_files/") + craigs_url + str("/") + neigh + ".csv"
     else:
         folder_and_file = str("home_files/") + craigs_url + str("/") + city + ".csv"

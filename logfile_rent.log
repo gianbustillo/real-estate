@@ -1,10 +1,65 @@
-2017-01-28 13:03:03,519 - __main__ - ERROR - 0
+2017-01-29 21:04:55,098 - washingtondc_rent - ERROR - 0
 Traceback (most recent call last):
-  File "rent_craigslist.py", line 51, in <module>
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 53, in <module>
     craigs_url = cities_states[line][column]
 IndexError: list index out of range
-2017-01-28 13:06:29,868 - __main__ - ERROR - 0
+2017-01-29 21:04:55,572 - washingtondc_rent - ERROR - 0
 Traceback (most recent call last):
-  File "rent_craigslist.py", line 51, in <module>
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 53, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-01-29 21:04:56,061 - washingtondc_rent - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 53, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-01-29 21:04:56,509 - washingtondc_rent - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 53, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-01-29 21:04:57,026 - washingtondc_rent - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 53, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-01-29 21:04:57,595 - washingtondc_rent - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 53, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-01-29 21:04:58,059 - washingtondc_rent - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 53, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-01-29 21:04:58,523 - washingtondc_rent - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 53, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-01-29 21:04:59,000 - washingtondc_rent - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 53, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-01-29 21:04:59,428 - washingtondc_rent - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 53, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-01-29 21:06:24,181 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-01-29 21:06:42,226 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-01-29 21:24:05,177 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33160 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 52, in <module>
     craigs_url = cities_states[line][column]
 IndexError: list index out of range
