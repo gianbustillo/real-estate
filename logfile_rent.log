@@ -73,3 +73,38 @@ Traceback (most recent call last):
   File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 52, in <module>
     craigs_url = cities_states[line][column]
 IndexError: list index out of range
+2017-01-30 21:19:43,734 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Richmond state: VA zipcode: 23290 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-01-30 22:18:11,029 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94102 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "sf_rent.py", line 636, in <module>
+    with open(folder_and_file,"a") as f:
+IOError: [Errno 2] No such file or directory: 'rent_files/sanfrancisco/94102.csv'
+2017-01-30 22:19:06,072 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94102 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "sf_rent.py", line 652, in <module>
+    with open(overall_filename, 'wb') as b:
+IOError: [Errno 13] Permission denied: 'cities_list_sf.csv'
+2017-01-30 22:27:24,240 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94134 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "sf_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-01-31 02:20:19,447 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: College Park state: MD zipcode: 20740 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-01-31 02:38:52,157 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33160 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-01-31 02:47:19,710 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Henrico state: VA zipcode: 23294 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range

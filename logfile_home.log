@@ -1,15 +1,5 @@
-2017-01-30 00:59:39,673 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33160 url: 0 bedroom_no: 0 craigs_price: 0 estate_url: http://www.estately.com/FL/33160/sold?min_bed=1 bed: 3 home_price: 450000.0
+2017-01-31 07:55:45,845 - __main__ - ERROR - 0
 Traceback (most recent call last):
-  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_home.py", line 64, in <module>
-    craigs_url = cities_states[line][column]
-IndexError: list index out of range
-2017-01-30 03:02:44,891 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Washington state: DC zipcode: 20001 url: 0 bedroom_no: 0 craigs_price: 0 estate_url: http://www.estately.com/DC/20001/sold?min_bed=1 bed: 3 home_price: 775000.0
-Traceback (most recent call last):
-  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_home.py", line 64, in <module>
-    craigs_url = cities_states[line][column]
-IndexError: list index out of range
-2017-01-30 03:04:00,565 - __main__ - ERROR - 0
-Traceback (most recent call last):
-  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_home.py", line 64, in <module>
-    craigs_url = cities_states[line][column]
-IndexError: list index out of range
+  File "richmond_home.py", line 849, in <module>
+    if os.path.exists(folder_and_file) == False:
+NameError: name 'folder_and_file' is not defined

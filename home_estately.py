@@ -10,13 +10,13 @@ import os
 import smtplib
 
 
-
-
 os.system('washingtondc_home.py')
 
 os.system('miami_home.py')
 
 os.system('richmond_home.py')
+
+os.system('sanfrancisco_home.py')
 
 content = 'home_estately.py - COMPLETED'
 mail = smtplib.SMTP('smtp.gmail.com',587)
