@@ -63,3 +63,13 @@ Traceback (most recent call last):
   File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 52, in <module>
     craigs_url = cities_states[line][column]
 IndexError: list index out of range
+2017-01-30 02:18:51,049 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: College Park state: MD zipcode: 20740 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-01-30 02:35:49,244 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33160 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range

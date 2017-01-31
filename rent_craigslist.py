@@ -16,6 +16,7 @@ os.system('washingtondc_rent.py')
 
 os.system('miami_rent.py')
 
+os.system('richmond_rent.py')
 
 content = 'rent_craigslist.py - COMPLETED'
 mail = smtplib.SMTP('smtp.gmail.com',587)
