@@ -883,12 +883,3 @@ except Exception, e:
     logger.error(FORMAT, exc_info=True)
 
 os.system('updating_cities_richmond.py')
-
-
-content = 'home_estately.py - COMPLETED'
-mail = smtplib.SMTP('smtp.gmail.com',587)
-mail.ehlo()
-mail.starttls()
-mail.login('onenefautomation@gmail.com','!Password1')
-mail.sendmail('x','gianbustillo@gmail.com',content)
-mail.close()
