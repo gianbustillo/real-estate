@@ -1,5 +1,30 @@
-2017-01-31 07:55:45,845 - __main__ - ERROR - 0
+2017-01-31 20:27:51,976 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: College Park state: MD zipcode: 20740 url: 0 bedroom_no: 0 craigs_price: 0 estate_url: http://www.estately.com/MD/20740/sold?min_bed=1 bed: 4 home_price: 425000.0
 Traceback (most recent call last):
-  File "richmond_home.py", line 849, in <module>
-    if os.path.exists(folder_and_file) == False:
-NameError: name 'folder_and_file' is not defined
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-01-31 20:29:25,506 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-01 03:00:33,316 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-01 03:01:51,443 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-01 03:20:48,049 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Henrico state: VA zipcode: 23294 url: 0 bedroom_no: 0 craigs_price: 0 estate_url: http://www.estately.com/VA/23294/sold?min_bed=1 bed: 3 home_price: 132700.0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-01 04:09:22,687 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94158 url: 0 bedroom_no: 0 craigs_price: 0 estate_url: http://www.estately.com/CA/94158/sold?min_bed=1 bed: 2 home_price: 1125000.0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range

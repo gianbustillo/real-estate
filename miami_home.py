@@ -859,14 +859,10 @@ try:
                  writer.writerow(city_rent_home )
                  f.close()
 
-
-
         else:
             overall_list = [craigs_url,neigh,city,state,zipcode,RentStatusLastRun, RentDateLastRun,'FAILED',today_a,'','','','','','','','','','','','','']
 
         #adding overall_list to main csv
-
-
 
 
         csv_list = []

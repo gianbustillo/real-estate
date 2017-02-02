@@ -16,7 +16,7 @@ os.system('miami_home.py')
 
 os.system('richmond_home.py')
 
-os.system('sanfrancisco_home.py')
+os.system('sf_home.py')
 
 content = 'home_estately.py - COMPLETED'
 mail = smtplib.SMTP('smtp.gmail.com',587)
