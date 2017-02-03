@@ -38,3 +38,28 @@ Traceback (most recent call last):
   File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_rent.py", line 52, in <module>
     craigs_url = cities_states[line][column]
 IndexError: list index out of range
+2017-02-03 18:06:32,809 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: College Park state: MD zipcode: 20740 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 476, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 597, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Python27\lib\requests\adapters.py", line 487, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPConnectionPool(host="01-31'.craigslist.org", port=80): Max retries exceeded with url: /search/apa?s=0&bedrooms=1&query=-130+%22house%22+-%22townhouse%22+-%22town+house%22+-%22town+home%22+-%22condo%22+-+%22condominium%22+-%22apartment%22&sort=date (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x042CE8F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-02-03 18:23:54,177 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33160 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-03 18:31:34,183 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Henrico state: VA zipcode: 23294 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range

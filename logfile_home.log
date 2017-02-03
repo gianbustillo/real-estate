@@ -48,3 +48,23 @@ Traceback (most recent call last):
   File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_home.py", line 64, in <module>
     craigs_url = cities_states[line][column]
 IndexError: list index out of range
+2017-02-03 17:47:36,131 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-03 17:49:18,628 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-03 17:50:19,471 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-03 17:51:01,384 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
