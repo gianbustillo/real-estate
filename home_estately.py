@@ -18,6 +18,8 @@ os.system('richmond_home.py')
 
 os.system('sf_home.py')
 
+os.system('baltimore_home.py')
+
 content = 'home_estately.py - COMPLETED'
 mail = smtplib.SMTP('smtp.gmail.com',587)
 mail.ehlo()

@@ -20,6 +20,8 @@ os.system('richmond_rent.py')
 
 os.system('sf_rent.py')
 
+os.system('baltimore_rent.py')
+
 content = 'rent_craigslist.py - COMPLETED'
 mail = smtplib.SMTP('smtp.gmail.com',587)
 mail.ehlo()

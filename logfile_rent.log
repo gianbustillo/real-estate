@@ -68,3 +68,100 @@ Traceback (most recent call last):
   File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_rent.py", line 52, in <module>
     craigs_url = cities_states[line][column]
 IndexError: list index out of range
+2017-02-04 07:06:43,411 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Woodbridge state: VA zipcode: 22193 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 652, in <module>
+    with open(overall_filename, 'wb') as b:
+IOError: [Errno 13] Permission denied: 'cities_list_washdc.csv'
+2017-02-04 07:07:23,894 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33128 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 650, in <module>
+    csv_list.extend(no_clue)
+Error: line contains NULL byte
+2017-02-04 07:15:13,835 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Richmond state: VA zipcode: 23285 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-04 07:23:06,066 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94158 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-04 07:33:21,395 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: College Park state: MD zipcode: 20740 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 476, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 597, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Python27\lib\requests\adapters.py", line 487, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPConnectionPool(host="01-31'.craigslist.org", port=80): Max retries exceeded with url: /search/apa?s=0&bedrooms=1&query=-130+%22house%22+-%22townhouse%22+-%22town+house%22+-%22town+home%22+-%22condo%22+-+%22condominium%22+-%22apartment%22&sort=date (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x03F576F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-02-04 07:33:27,884 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 50, in <module>
+    for row in csv_reader:
+Error: line contains NULL byte
+2017-02-04 07:33:29,000 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-04 07:33:31,213 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-04 07:33:49,411 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 476, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 597, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Python27\lib\requests\adapters.py", line 487, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPConnectionPool(host="01-31'.craigslist.org", port=80): Max retries exceeded with url: /search/apa?s=0&bedrooms=1&query=-130+%22house%22+-%22townhouse%22+-%22town+house%22+-%22town+home%22+-%22condo%22+-+%22condominium%22+-%22apartment%22&sort=date (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x03D96750>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-02-04 07:33:52,450 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 50, in <module>
+    for row in csv_reader:
+Error: line contains NULL byte
+2017-02-04 07:33:53,279 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-04 07:33:54,697 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-04 07:39:24,345 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: baltimore neigh:  city: Baltimore state: MD zipcode: 21239 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 462, in request
+    prep = self.prepare_request(req)
+  File "C:\Python27\lib\requests\sessions.py", line 395, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python27\lib\requests\models.py", line 299, in prepare
+    self.prepare_url(url, params)
+  File "C:\Python27\lib\requests\models.py", line 368, in prepare_url
+    raise InvalidURL('URL has an invalid label.')
+InvalidURL: URL has an invalid label.
