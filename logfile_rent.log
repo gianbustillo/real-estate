@@ -149,3 +149,787 @@ Traceback (most recent call last):
   File "C:\Python27\lib\requests\models.py", line 368, in prepare_url
     raise InvalidURL('URL has an invalid label.')
 InvalidURL: URL has an invalid label.
+2017-02-09 02:19:48,828 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: College Park state: MD zipcode: 20740 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 476, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 597, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Python27\lib\requests\adapters.py", line 487, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPConnectionPool(host="01-31'.craigslist.org", port=80): Max retries exceeded with url: /search/apa?s=0&bedrooms=1&query=-130+%22house%22+-%22townhouse%22+-%22town+house%22+-%22town+home%22+-%22condo%22+-+%22condominium%22+-%22apartment%22&sort=date (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x034BEC70>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-02-09 02:35:30,266 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33160 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-09 02:43:47,696 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Richmond state: VA zipcode: 23291 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-09 02:53:21,227 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94158 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-09 02:58:52,088 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: baltimore neigh:  city: Baltimore state: MD zipcode: 21239 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 462, in request
+    prep = self.prepare_request(req)
+  File "C:\Python27\lib\requests\sessions.py", line 395, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python27\lib\requests\models.py", line 299, in prepare
+    self.prepare_url(url, params)
+  File "C:\Python27\lib\requests\models.py", line 368, in prepare_url
+    raise InvalidURL('URL has an invalid label.')
+InvalidURL: URL has an invalid label.
+2017-02-10 02:24:42,433 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: College Park state: MD zipcode: 20740 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 476, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 597, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Python27\lib\requests\adapters.py", line 487, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPConnectionPool(host="01-31'.craigslist.org", port=80): Max retries exceeded with url: /search/apa?s=0&bedrooms=1&query=-130+%22house%22+-%22townhouse%22+-%22town+house%22+-%22town+home%22+-%22condo%22+-+%22condominium%22+-%22apartment%22&sort=date (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x03C094F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-02-10 02:43:24,118 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33160 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-10 02:53:07,562 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Henrico state: VA zipcode: 23294 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-10 03:01:12,309 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94158 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-10 03:06:39,920 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: baltimore neigh:  city: Baltimore state: MD zipcode: 21239 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 462, in request
+    prep = self.prepare_request(req)
+  File "C:\Python27\lib\requests\sessions.py", line 395, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python27\lib\requests\models.py", line 299, in prepare
+    self.prepare_url(url, params)
+  File "C:\Python27\lib\requests\models.py", line 368, in prepare_url
+    raise InvalidURL('URL has an invalid label.')
+InvalidURL: URL has an invalid label.
+2017-02-11 02:08:21,066 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Leesburg state: VA zipcode: 20175 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 227, in <module>
+    r_th = requests.get(url_th)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 476, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 618, in send
+    history = [resp for resp in gen] if allow_redirects else []
+  File "C:\Python27\lib\requests\sessions.py", line 178, in resolve_redirects
+    **adapter_kwargs
+  File "C:\Python27\lib\requests\sessions.py", line 629, in send
+    r.content
+  File "C:\Python27\lib\requests\models.py", line 757, in content
+    self._content = bytes().join(self.iter_content(CONTENT_CHUNK_SIZE)) or bytes()
+  File "C:\Python27\lib\requests\models.py", line 682, in generate
+    raise ChunkedEncodingError(e)
+ChunkedEncodingError: ("Connection broken: error(10054, 'An existing connection was forcibly closed by the remote host')", error(10054, 'An existing connection was forcibly closed by the remote host'))
+2017-02-11 02:24:20,950 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33160 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-11 02:32:42,788 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Henrico state: VA zipcode: 23294 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-11 02:41:37,423 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94158 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-11 02:47:25,871 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: baltimore neigh:  city: Baltimore state: MD zipcode: 21239 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 462, in request
+    prep = self.prepare_request(req)
+  File "C:\Python27\lib\requests\sessions.py", line 395, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python27\lib\requests\models.py", line 299, in prepare
+    self.prepare_url(url, params)
+  File "C:\Python27\lib\requests\models.py", line 368, in prepare_url
+    raise InvalidURL('URL has an invalid label.')
+InvalidURL: URL has an invalid label.
+2017-02-12 02:20:48,292 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: College Park state: MD zipcode: 20740 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-12 02:35:38,969 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33160 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-12 02:44:26,292 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Richmond state: VA zipcode: 23241 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-12 02:53:53,786 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94158 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-12 02:59:55,742 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: baltimore neigh:  city: Baltimore state: MD zipcode: 21239 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 462, in request
+    prep = self.prepare_request(req)
+  File "C:\Python27\lib\requests\sessions.py", line 395, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python27\lib\requests\models.py", line 299, in prepare
+    self.prepare_url(url, params)
+  File "C:\Python27\lib\requests\models.py", line 368, in prepare_url
+    raise InvalidURL('URL has an invalid label.')
+InvalidURL: URL has an invalid label.
+2017-02-13 02:20:55,253 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: College Park state: MD zipcode: 20740 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-13 02:36:34,016 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33160 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-13 02:45:57,539 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Richmond state: VA zipcode: 23291 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-13 02:54:23,717 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94158 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-13 03:00:26,142 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: baltimore neigh:  city: Baltimore state: MD zipcode: 21234 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 462, in request
+    prep = self.prepare_request(req)
+  File "C:\Python27\lib\requests\sessions.py", line 395, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python27\lib\requests\models.py", line 299, in prepare
+    self.prepare_url(url, params)
+  File "C:\Python27\lib\requests\models.py", line 368, in prepare_url
+    raise InvalidURL('URL has an invalid label.')
+InvalidURL: URL has an invalid label.
+2017-02-14 02:14:58,795 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Arlington state: VA zipcode: 22201 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 227, in <module>
+    r_th = requests.get(url_th)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 476, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 618, in send
+    history = [resp for resp in gen] if allow_redirects else []
+  File "C:\Python27\lib\requests\sessions.py", line 178, in resolve_redirects
+    **adapter_kwargs
+  File "C:\Python27\lib\requests\sessions.py", line 597, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Python27\lib\requests\adapters.py", line 487, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPSConnectionPool(host='washingtondc.craigslist.org', port=443): Max retries exceeded with url: /search/apa?s=0&bedrooms=1&query=22202+%22town+house%22+%7C+%22townhouse%22+%7C+%22town+home%22+-%22apartment%22+-%22house%22+-%22condo%22+-+%22condominium%22&sort=date (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x035C7270>: Failed to establish a new connection: [Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',))
+2017-02-14 02:32:24,375 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33160 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-14 02:41:19,671 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Henrico state: VA zipcode: 23294 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-14 02:49:43,872 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94172 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-14 02:55:47,049 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: baltimore neigh:  city: Baltimore state: MD zipcode: 21239 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 462, in request
+    prep = self.prepare_request(req)
+  File "C:\Python27\lib\requests\sessions.py", line 395, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python27\lib\requests\models.py", line 299, in prepare
+    self.prepare_url(url, params)
+  File "C:\Python27\lib\requests\models.py", line 368, in prepare_url
+    raise InvalidURL('URL has an invalid label.')
+InvalidURL: URL has an invalid label.
+2017-02-15 02:21:53,591 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: College Park state: MD zipcode: 20740 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-15 02:38:27,513 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33160 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-15 02:46:26,089 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Henrico state: VA zipcode: 23294 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-15 02:54:31,716 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94158 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-15 03:00:04,296 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: baltimore neigh:  city: Baltimore state: MD zipcode: 21239 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 462, in request
+    prep = self.prepare_request(req)
+  File "C:\Python27\lib\requests\sessions.py", line 395, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python27\lib\requests\models.py", line 299, in prepare
+    self.prepare_url(url, params)
+  File "C:\Python27\lib\requests\models.py", line 368, in prepare_url
+    raise InvalidURL('URL has an invalid label.')
+InvalidURL: URL has an invalid label.
+2017-02-16 18:19:48,069 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Annandale state: VA zipcode: 22003 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 409, in <module>
+    r_c = requests.get(url_c)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 476, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 618, in send
+    history = [resp for resp in gen] if allow_redirects else []
+  File "C:\Python27\lib\requests\sessions.py", line 178, in resolve_redirects
+    **adapter_kwargs
+  File "C:\Python27\lib\requests\sessions.py", line 629, in send
+    r.content
+  File "C:\Python27\lib\requests\models.py", line 757, in content
+    self._content = bytes().join(self.iter_content(CONTENT_CHUNK_SIZE)) or bytes()
+  File "C:\Python27\lib\requests\models.py", line 682, in generate
+    raise ChunkedEncodingError(e)
+ChunkedEncodingError: ("Connection broken: error(10054, 'An existing connection was forcibly closed by the remote host')", error(10054, 'An existing connection was forcibly closed by the remote host'))
+2017-02-16 18:37:21,907 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33160 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-16 18:46:56,263 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Henrico state: VA zipcode: 23294 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-16 18:56:45,391 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94134 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-16 19:03:42,497 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: baltimore neigh:  city: Baltimore state: MD zipcode: 21239 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 462, in request
+    prep = self.prepare_request(req)
+  File "C:\Python27\lib\requests\sessions.py", line 395, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python27\lib\requests\models.py", line 299, in prepare
+    self.prepare_url(url, params)
+  File "C:\Python27\lib\requests\models.py", line 368, in prepare_url
+    raise InvalidURL('URL has an invalid label.')
+InvalidURL: URL has an invalid label.
+2017-02-17 05:13:28,786 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Arlington state: VA zipcode: 22207 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-17 05:29:53,063 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33160 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-17 05:39:08,006 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Henrico state: VA zipcode: 23294 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-17 05:48:38,352 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94172 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-17 05:54:17,795 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: baltimore neigh:  city: Baltimore state: MD zipcode: 21234 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 462, in request
+    prep = self.prepare_request(req)
+  File "C:\Python27\lib\requests\sessions.py", line 395, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python27\lib\requests\models.py", line 299, in prepare
+    self.prepare_url(url, params)
+  File "C:\Python27\lib\requests\models.py", line 368, in prepare_url
+    raise InvalidURL('URL has an invalid label.')
+InvalidURL: URL has an invalid label.
+2017-02-18 02:13:18,239 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Arlington state: VA zipcode: 22207 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-18 02:28:39,868 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33160 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-18 02:37:26,726 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Henrico state: VA zipcode: 23294 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-18 02:46:43,918 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94158 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-18 02:52:09,344 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: baltimore neigh:  city: Baltimore state: MD zipcode: 21239 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 462, in request
+    prep = self.prepare_request(req)
+  File "C:\Python27\lib\requests\sessions.py", line 395, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python27\lib\requests\models.py", line 299, in prepare
+    self.prepare_url(url, params)
+  File "C:\Python27\lib\requests\models.py", line 368, in prepare_url
+    raise InvalidURL('URL has an invalid label.')
+InvalidURL: URL has an invalid label.
+2017-02-20 11:47:18,016 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Arlington state: VA zipcode: 22207 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-20 12:03:39,078 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33160 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-20 12:12:07,131 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Richmond state: VA zipcode: 23292 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-20 12:21:10,157 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94158 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-20 12:26:58,601 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: baltimore neigh:  city: Baltimore state: MD zipcode: 21239 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 462, in request
+    prep = self.prepare_request(req)
+  File "C:\Python27\lib\requests\sessions.py", line 395, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python27\lib\requests\models.py", line 299, in prepare
+    self.prepare_url(url, params)
+  File "C:\Python27\lib\requests\models.py", line 368, in prepare_url
+    raise InvalidURL('URL has an invalid label.')
+InvalidURL: URL has an invalid label.
+2017-02-22 18:23:44,825 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Washington state: DC zipcode: 20001 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 476, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 618, in send
+    history = [resp for resp in gen] if allow_redirects else []
+  File "C:\Python27\lib\requests\sessions.py", line 178, in resolve_redirects
+    **adapter_kwargs
+  File "C:\Python27\lib\requests\sessions.py", line 597, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Python27\lib\requests\adapters.py", line 487, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPSConnectionPool(host='washingtondc.craigslist.org', port=443): Max retries exceeded with url: /search/apa?s=0&bedrooms=1&query=20002+%22house%22+-%22townhouse%22+-%22town+house%22+-%22town+home%22+-%22condo%22+-+%22condominium%22+-%22apartment%22&sort=date (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x0305CF50>: Failed to establish a new connection: [Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',))
+2017-02-22 18:39:36,155 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33196 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 227, in <module>
+    r_th = requests.get(url_th)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 476, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 618, in send
+    history = [resp for resp in gen] if allow_redirects else []
+  File "C:\Python27\lib\requests\sessions.py", line 178, in resolve_redirects
+    **adapter_kwargs
+  File "C:\Python27\lib\requests\sessions.py", line 597, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Python27\lib\requests\adapters.py", line 487, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPSConnectionPool(host='miami.craigslist.org', port=443): Max retries exceeded with url: /search/apa?s=0&bedrooms=1&query=33242+%22town+house%22+%7C+%22townhouse%22+%7C+%22town+home%22+-%22apartment%22+-%22house%22+-%22condo%22+-+%22condominium%22&sort=date (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x04650130>: Failed to establish a new connection: [Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',))
+2017-02-22 18:50:50,339 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Henrico state: VA zipcode: 23294 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-22 19:00:18,848 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94158 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-22 19:06:44,640 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: baltimore neigh:  city: Baltimore state: MD zipcode: 21239 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 462, in request
+    prep = self.prepare_request(req)
+  File "C:\Python27\lib\requests\sessions.py", line 395, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python27\lib\requests\models.py", line 299, in prepare
+    self.prepare_url(url, params)
+  File "C:\Python27\lib\requests\models.py", line 368, in prepare_url
+    raise InvalidURL('URL has an invalid label.')
+InvalidURL: URL has an invalid label.
+2017-02-23 18:03:04,901 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Arlington state: VA zipcode: 22207 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-25 08:04:25,023 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Arlington state: VA zipcode: 22207 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-26 02:14:23,154 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Arlington state: VA zipcode: 22207 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-26 02:29:53,463 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33160 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-26 02:38:16,681 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Henrico state: VA zipcode: 23294 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-26 02:47:03,578 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94158 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-26 02:53:04,051 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: baltimore neigh:  city: Baltimore state: MD zipcode: 21234 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 462, in request
+    prep = self.prepare_request(req)
+  File "C:\Python27\lib\requests\sessions.py", line 395, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python27\lib\requests\models.py", line 299, in prepare
+    self.prepare_url(url, params)
+  File "C:\Python27\lib\requests\models.py", line 368, in prepare_url
+    raise InvalidURL('URL has an invalid label.')
+InvalidURL: URL has an invalid label.
+2017-02-27 19:30:16,493 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Woodbridge state: VA zipcode: 22193 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 227, in <module>
+    r_th = requests.get(url_th)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 476, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 618, in send
+    history = [resp for resp in gen] if allow_redirects else []
+  File "C:\Python27\lib\requests\sessions.py", line 178, in resolve_redirects
+    **adapter_kwargs
+  File "C:\Python27\lib\requests\sessions.py", line 597, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Python27\lib\requests\adapters.py", line 487, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPSConnectionPool(host='washingtondc.craigslist.org', port=443): Max retries exceeded with url: /search/apa?s=0&bedrooms=1&query=22193+%22town+house%22+%7C+%22townhouse%22+%7C+%22town+home%22+-%22apartment%22+-%22house%22+-%22condo%22+-+%22condominium%22&sort=date (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x02E7D1B0>: Failed to establish a new connection: [Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',))
+2017-02-27 19:50:19,286 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33160 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-27 19:59:50,694 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Richmond state: VA zipcode: 23292 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-27 20:10:21,410 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94158 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-27 20:16:54,401 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: baltimore neigh:  city: Baltimore state: MD zipcode: 21239 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 462, in request
+    prep = self.prepare_request(req)
+  File "C:\Python27\lib\requests\sessions.py", line 395, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python27\lib\requests\models.py", line 299, in prepare
+    self.prepare_url(url, params)
+  File "C:\Python27\lib\requests\models.py", line 368, in prepare_url
+    raise InvalidURL('URL has an invalid label.')
+InvalidURL: URL has an invalid label.
+2017-02-28 18:32:07,934 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Arlington state: VA zipcode: 22207 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-28 18:49:17,219 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33160 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-28 18:58:26,941 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Henrico state: VA zipcode: 23238 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-28 19:06:59,910 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94158 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-02-28 19:13:56,989 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: baltimore neigh:  city: Baltimore state: MD zipcode: 21239 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 462, in request
+    prep = self.prepare_request(req)
+  File "C:\Python27\lib\requests\sessions.py", line 395, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python27\lib\requests\models.py", line 299, in prepare
+    self.prepare_url(url, params)
+  File "C:\Python27\lib\requests\models.py", line 368, in prepare_url
+    raise InvalidURL('URL has an invalid label.')
+InvalidURL: URL has an invalid label.
+2017-03-01 02:14:19,502 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Arlington state: VA zipcode: 22207 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-01 02:29:54,618 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33160 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-01 02:38:08,069 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Henrico state: VA zipcode: 23294 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-01 02:47:29,559 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94159 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-01 02:52:51,973 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: baltimore neigh:  city: Baltimore state: MD zipcode: 21239 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 462, in request
+    prep = self.prepare_request(req)
+  File "C:\Python27\lib\requests\sessions.py", line 395, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python27\lib\requests\models.py", line 299, in prepare
+    self.prepare_url(url, params)
+  File "C:\Python27\lib\requests\models.py", line 368, in prepare_url
+    raise InvalidURL('URL has an invalid label.')
+InvalidURL: URL has an invalid label.
+2017-03-02 23:03:39,684 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Arlington state: VA zipcode: 22207 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-02 23:03:59,619 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33137 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 418, in <module>
+    while datestart_c !=-1  and yesterday_date_loc_c == -1 and price_start_c != -1:
+NameError: name 'price_start_c' is not defined
+2017-03-02 23:13:00,450 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Richmond state: VA zipcode: 23292 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-02 23:22:20,592 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94158 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-02 23:29:30,181 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: baltimore neigh:  city: Baltimore state: MD zipcode: 21239 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 462, in request
+    prep = self.prepare_request(req)
+  File "C:\Python27\lib\requests\sessions.py", line 395, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python27\lib\requests\models.py", line 299, in prepare
+    self.prepare_url(url, params)
+  File "C:\Python27\lib\requests\models.py", line 368, in prepare_url
+    raise InvalidURL('URL has an invalid label.')
+InvalidURL: URL has an invalid label.
+2017-03-04 08:16:34,940 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Arlington state: VA zipcode: 22207 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-04 08:32:28,793 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33160 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-04 08:40:57,595 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Henrico state: VA zipcode: 23294 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-04 08:49:12,062 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94159 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-04 08:54:46,895 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: baltimore neigh:  city: Baltimore state: MD zipcode: 21239 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_rent.py", line 110, in <module>
+    r_h = requests.get(url_h)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 462, in request
+    prep = self.prepare_request(req)
+  File "C:\Python27\lib\requests\sessions.py", line 395, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python27\lib\requests\models.py", line 299, in prepare
+    self.prepare_url(url, params)
+  File "C:\Python27\lib\requests\models.py", line 368, in prepare_url
+    raise InvalidURL('URL has an invalid label.')
+InvalidURL: URL has an invalid label.
