@@ -1296,3 +1296,8 @@ Traceback (most recent call last):
   File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_rent.py", line 52, in <module>
     craigs_url = cities_states[line][column]
 IndexError: list index out of range
+2017-03-14 18:47:05,595 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Richmond state: VA zipcode: 23274 url: 0 bedroom_no: 0 craigs_price: 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_rent.py", line 52, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
