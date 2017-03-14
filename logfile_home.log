@@ -629,3 +629,313 @@ Traceback (most recent call last):
   File "C:\Python27\lib\_strptime.py", line 332, in _strptime
     (data_string, format))
 ValueError: time data '' does not match format '%Y-%m-%d'
+2017-03-05 11:02:35,581 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-05 11:03:54,674 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-05 11:05:33,992 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-05 11:06:17,552 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-05 12:15:24,878 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: baltimore neigh:  city: Baltimore state: MD zipcode: 21239 url: 0 bedroom_no: 0 craigs_price: 0 estate_url: http://www.estately.com/MD/21239/sold?min_bed=1 bed: 4 home_price: 339000.0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_home.py", line 75, in <module>
+    today_file_format = datetime.datetime.strptime(today_file, '%Y-%m-%d').date()
+  File "C:\Python27\lib\_strptime.py", line 332, in _strptime
+    (data_string, format))
+ValueError: time data '' does not match format '%Y-%m-%d'
+2017-03-06 18:12:18,032 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Washington state: DC zipcode: 20245 url: 0 bedroom_no: 0 craigs_price: 0 estate_url: http://www.estately.com/DC/20245/sold?min_bed=1 bed: 2 home_price: 297500.0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-06 20:15:14,454 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33160 url: 0 bedroom_no: 0 craigs_price: 0 estate_url: http://www.estately.com/FL/33160/sold?min_bed=1 bed: 4 home_price: 1450000.0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-06 20:16:31,779 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-06 20:17:15,532 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-06 20:19:11,403 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: baltimore neigh:  city: Baltimore state: MD zipcode: 21225 url: 0 bedroom_no: 0 craigs_price: 0 estate_url: http://www.estately.com/MD/21225/sold?min_bed=1 bed: 2 home_price: 18500.0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_home.py", line 75, in <module>
+    today_file_format = datetime.datetime.strptime(today_file, '%Y-%m-%d').date()
+  File "C:\Python27\lib\_strptime.py", line 332, in _strptime
+    (data_string, format))
+ValueError: time data '' does not match format '%Y-%m-%d'
+2017-03-07 08:21:27,885 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-07 08:22:35,036 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-07 08:23:28,013 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-07 08:24:09,674 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-07 08:24:16,588 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_home.py", line 75, in <module>
+    today_file_format = datetime.datetime.strptime(today_file, '%Y-%m-%d').date()
+  File "C:\Python27\lib\_strptime.py", line 332, in _strptime
+    (data_string, format))
+ValueError: time data '' does not match format '%Y-%m-%d'
+2017-03-08 20:10:22,380 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Washington state: DC zipcode: 20018 url: 0 bedroom_no: 0 craigs_price: 0 estate_url: http://www.estately.com/DC/20018/sold?min_bed=1 bed: 4 home_price: 827960.0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-08 20:11:48,625 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-08 20:20:23,802 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Richmond state: VA zipcode: 23221 url: 0 bedroom_no: 0 craigs_price: 0 estate_url: http://www.estately.com/VA/23221/sold?min_bed=1 bed: 4 home_price: 323500.0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_home.py", line 208, in <module>
+    b = requests.get(property_url)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 476, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 597, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Python27\lib\requests\adapters.py", line 487, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPConnectionPool(host='www.estately.com', port=80): Max retries exceeded with url: /listings/info/4512-kensington-avenue--1 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x034588B0>: Failed to establish a new connection: [Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',))
+2017-03-08 20:35:29,921 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94110 url: 0 bedroom_no: 0 craigs_price: 0 estate_url: http://www.estately.com/CA/94110/sold?min_bed=1 bed: 2 home_price: 1300000.0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_home.py", line 208, in <module>
+    b = requests.get(property_url)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 476, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 597, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Python27\lib\requests\adapters.py", line 487, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPConnectionPool(host='www.estately.com', port=80): Max retries exceeded with url: /listings/info/3011-20th-street (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x046DEBF0>: Failed to establish a new connection: [Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',))
+2017-03-08 20:36:07,020 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_home.py", line 75, in <module>
+    today_file_format = datetime.datetime.strptime(today_file, '%Y-%m-%d').date()
+  File "C:\Python27\lib\_strptime.py", line 332, in _strptime
+    (data_string, format))
+ValueError: time data '' does not match format '%Y-%m-%d'
+2017-03-09 18:04:29,691 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-09 18:06:01,073 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-09 18:41:10,224 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: richmond neigh:  city: Henrico state: VA zipcode: 23294 url: 0 bedroom_no: 0 craigs_price: 0 estate_url: http://www.estately.com/VA/23294/sold?min_bed=1 bed: 3 home_price: 195000.0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-09 19:15:45,180 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: sanfrancisco neigh:  city: San Francisco state: CA zipcode: 94158 url: 0 bedroom_no: 0 craigs_price: 0 estate_url: http://www.estately.com/CA/94158/sold?min_bed=1 bed: 2 home_price: 1160000.0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-09 19:16:06,624 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_home.py", line 75, in <module>
+    today_file_format = datetime.datetime.strptime(today_file, '%Y-%m-%d').date()
+  File "C:\Python27\lib\_strptime.py", line 332, in _strptime
+    (data_string, format))
+ValueError: time data '' does not match format '%Y-%m-%d'
+2017-03-10 03:00:35,809 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-10 03:01:35,358 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-10 03:02:28,559 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-10 03:03:09,108 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-10 03:03:14,924 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_home.py", line 75, in <module>
+    today_file_format = datetime.datetime.strptime(today_file, '%Y-%m-%d').date()
+  File "C:\Python27\lib\_strptime.py", line 332, in _strptime
+    (data_string, format))
+ValueError: time data '' does not match format '%Y-%m-%d'
+2017-03-11 11:53:49,874 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Herndon state: VA zipcode: 20171 url: 0 bedroom_no: 0 craigs_price: 0 estate_url: http://www.estately.com/VA/20171/sold?min_bed=1 bed: 4 home_price: 680000.0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_home.py", line 208, in <module>
+    b = requests.get(property_url)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 476, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 597, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Python27\lib\requests\adapters.py", line 473, in send
+    raise ConnectionError(err, request=request)
+ConnectionError: ('Connection aborted.', error(10054, 'An existing connection was forcibly closed by the remote host'))
+2017-03-11 11:56:29,658 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-11 11:57:42,236 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-11 11:58:32,098 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-11 11:58:41,525 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_home.py", line 75, in <module>
+    today_file_format = datetime.datetime.strptime(today_file, '%Y-%m-%d').date()
+  File "C:\Python27\lib\_strptime.py", line 332, in _strptime
+    (data_string, format))
+ValueError: time data '' does not match format '%Y-%m-%d'
+2017-03-12 10:21:16,668 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: washingtondc neigh:  city: Leesburg state: VA zipcode: 20176 url: 0 bedroom_no: 0 craigs_price: 0 estate_url: http://www.estately.com/VA/20176/sold?min_bed=1 bed: 3 home_price: 320000.0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_home.py", line 208, in <module>
+    b = requests.get(property_url)
+  File "C:\Python27\lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 476, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Python27\lib\requests\sessions.py", line 597, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Python27\lib\requests\adapters.py", line 487, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPConnectionPool(host='www.estately.com', port=80): Max retries exceeded with url: /listings/info/523-richmond-square-ne (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x02CC0E90>: Failed to establish a new connection: [Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',))
+2017-03-12 10:24:33,868 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-12 10:25:47,542 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-12 10:26:45,480 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-12 14:04:22,357 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: baltimore neigh:  city: Baltimore state: MD zipcode: 21239 url: 0 bedroom_no: 0 craigs_price: 0 estate_url: http://www.estately.com/MD/21239/sold?min_bed=1 bed: 2 home_price: 220000.0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_home.py", line 75, in <module>
+    today_file_format = datetime.datetime.strptime(today_file, '%Y-%m-%d').date()
+  File "C:\Python27\lib\_strptime.py", line 332, in _strptime
+    (data_string, format))
+ValueError: time data '' does not match format '%Y-%m-%d'
+2017-03-13 03:00:33,740 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_home.py", line 62, in <module>
+    for row in csv_reader:
+Error: line contains NULL byte
+2017-03-13 04:59:28,904 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: miami neigh:  city: Miami state: FL zipcode: 33160 url: 0 bedroom_no: 0 craigs_price: 0 estate_url: http://www.estately.com/FL/33160/sold?min_bed=1 bed: 2 home_price: 535000.0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-13 05:00:20,634 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-13 05:01:00,770 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-13 05:03:00,118 - __main__ - ERROR - %(asctime)s %(message)s craigs_url: baltimore neigh:  city: Baltimore state: MD zipcode: 21225 url: 0 bedroom_no: 0 craigs_price: 0 estate_url: http://www.estately.com/MD/21225/sold?min_bed=1 bed: 2 home_price: 18000.0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_home.py", line 75, in <module>
+    today_file_format = datetime.datetime.strptime(today_file, '%Y-%m-%d').date()
+  File "C:\Python27\lib\_strptime.py", line 332, in _strptime
+    (data_string, format))
+ValueError: time data '' does not match format '%Y-%m-%d'
+2017-03-14 18:12:18,967 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\washingtondc_home.py", line 62, in <module>
+    for row in csv_reader:
+Error: line contains NULL byte
+2017-03-14 18:13:22,367 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\miami_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-14 18:14:39,719 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\richmond_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-14 18:15:36,078 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\sf_home.py", line 64, in <module>
+    craigs_url = cities_states[line][column]
+IndexError: list index out of range
+2017-03-14 18:15:55,414 - __main__ - ERROR - 0
+Traceback (most recent call last):
+  File "C:\Users\Gian Bustillo\Desktop\RealEstateProject\real-estate\baltimore_home.py", line 75, in <module>
+    today_file_format = datetime.datetime.strptime(today_file, '%Y-%m-%d').date()
+  File "C:\Python27\lib\_strptime.py", line 332, in _strptime
+    (data_string, format))
+ValueError: time data '' does not match format '%Y-%m-%d'

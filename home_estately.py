@@ -20,10 +20,10 @@ os.system('sf_home.py')
 
 os.system('baltimore_home.py')
 
-content = 'home_estately.py - COMPLETED'
-mail = smtplib.SMTP('smtp.gmail.com',587)
-mail.ehlo()
-mail.starttls()
-mail.login('onenefautomation@gmail.com','!Password1')
-mail.sendmail('x','gianbustillo@gmail.com',content)
-mail.close()
+#content = 'home_estately.py - COMPLETED'
+#mail = smtplib.SMTP('smtp.gmail.com',587)
+#mail.ehlo()
+#mail.starttls()
+#mail.login('onenefautomation@gmail.com','!Password1')
+#mail.sendmail('x','gianbustillo@gmail.com',content)
+#mail.close()
